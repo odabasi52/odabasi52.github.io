@@ -1,3 +1,1 @@
-I am passionate about OT security, cybersecurity research, and cloud computing. My work involves security vulnerabilities, offensive security techniques, and ICS security techniques. I actively participate in CTFs, explore network security, and document security risks and mitigation strategies.
- 
-This blog is where I share insights on cybersecurity, cloud computing, offensive security and many more.
+I'm passionate about OT security, cybersecurity research, and cloud computing, with a strong focus on identifying security vulnerabilities and exploring offensive security techniques. My work spans industrial control systems (ICS) security, IoT security, and penetration testing. I actively engage in Capture The Flag (CTF) competitions and continuously explore network security challenges. Through this blog, I share insights on cybersecurity, cloud technologies, offensive security strategies, and practical mitigation techniques to address evolving security risks.
