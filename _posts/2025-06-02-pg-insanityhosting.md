@@ -32,7 +32,9 @@ The news page disclosed a username, otis, which could potentially be used for fu
 Using the previously discovered otis username, I conducted a brute-force attack and successfully obtained valid login credentials.
 
 ![005 - brute force otis](https://github.com/user-attachments/assets/009a74d4-0b36-4b62-8bf5-6912a858ab08)
+
 ![006 - webmail otis login](https://github.com/user-attachments/assets/a9cf4a8d-ad4a-4d98-9c1b-b90c35d312e1)
+
 ![007 - monitoring otis login](https://github.com/user-attachments/assets/7f566436-4f48-4131-a6a7-4f3b1396e8bd)
 
 ## Exploitation
@@ -47,6 +49,7 @@ Through further exploitation of the SQL injection vulnerability, I was able to e
 One of the extracted password hashes was weak and easily cracked, which provided valid SSH credentials. Using these, I successfully gained SSH access to the target system.
 
 ![009 - hash cracks](https://github.com/user-attachments/assets/ebbca874-e1ee-4c21-b0b1-7e92c4afa0c4)
+
 ![010 - ssh](https://github.com/user-attachments/assets/0a7939b5-7f0b-4604-b369-722281dbd7dd)
 
 ## Privilege Escalation
