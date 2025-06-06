@@ -1,5 +1,6 @@
 # Juicy Bar CTF - Dynamic Code Analysis
 In this post, we’ll walk through the solutions for all four dynamic analysis challenges.
+I followed the official Frida Android tutorial (https://frida.re/docs/android/) to set up Frida before starting the challenge.
 
 ## Meet with Frida
 #### 1 - Description
