@@ -34,7 +34,7 @@ After successfully adding my key, I was able to SSH into the system as the alfre
 ![05 - user flag](https://github.com/user-attachments/assets/d2d54009-1aca-4608-8e07-72c05649a672)
 
 ## Privilege Escalation
-Once inside the SSH shell as alfredo, I checked the /etc/crontab file and noticed that a backup script was being executed every minute by the root user.
+Once inside the SSH shell as alfredo, I checked the /etc/crontab and noticed that a backup script was being executed every minute by the root user.
 
 The script executed by the root user's cron job was quite simple. It first exported a custom PATH environment variable, placing /home/alfredo/restapi at the beginning. Then, it used standard commands like cd and tar to create a backup archive.
 
