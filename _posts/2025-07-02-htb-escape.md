@@ -65,5 +65,6 @@ At that point, the machine was fully compromised.
 ![pwned](https://github.com/user-attachments/assets/d3b121dc-27e3-4576-b5b2-4f005f675e78)
 
 For more information about ADCS Privilege Escalation checkout below links:
-https://www.nccgroup.com/us/research-blog/defending-your-directory-an-expert-guide-to-fortifying-active-directory-certificate-services-adcs-against-exploitation/
-https://abrictosecurity.com/pentesting-active-directory-certificate-services-adcs-esc1-esc8/
+
+- https://www.nccgroup.com/us/research-blog/defending-your-directory-an-expert-guide-to-fortifying-active-directory-certificate-services-adcs-against-exploitation/
+- https://abrictosecurity.com/pentesting-active-directory-certificate-services-adcs-esc1-esc8/
