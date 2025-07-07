@@ -30,7 +30,7 @@ Using the extracted passwords.txt file, a successful brute-force attack was perf
 Upon examining the application directories, several SQLite database files were discovered; however, their contents did not contain any useful or sensitive information.
 
 ### NSClient++
-Further inspection of the Program Files directory revealed that NSClient++ was installed and actively running, with its web interface accessible on port 8443."
+Further inspection of the Program Files directory revealed that NSClient++ was installed and actively running, with its web interface accessible on port 8443.
 The installed NSClient++ was identified as version 0.5.2.35, which is known to contain a privilege escalation vulnerability that can be exploited to gain higher-level access on the system.
 
 Upon further examination, the nsclient.ini configuration file was found to contain the NSClient++ admin password. Additionally, the configuration restricted admin access to 127.0.0.1. To bypass this restriction, port forwarding was utilized to access the web interface locally with administrative privileges.
@@ -41,7 +41,7 @@ Upon further examination, the nsclient.ini configuration file was found to conta
 
 From this point, privilege escalation was straightforward. By leveraging the identified NSClient++ version and administrative access, the steps outlined in https://www.exploit-db.com/exploits/46802 were followed to successfully escalate privileges.
 
-"Due to the complexity of the NSClient++ web interface, an automated exploit script was utilized to streamline the process. Executing the script successfully exploited the vulnerability and resulted in a SYSTEM-level shell.
+Due to the complexity of the NSClient++ web interface, an automated exploit script was utilized to streamline the process. Executing the script successfully exploited the vulnerability and resulted in a SYSTEM-level shell.
 
 ![07 - exploit script](https://github.com/user-attachments/assets/d42ef742-66bd-45f9-b598-9ddf46def670)
 
