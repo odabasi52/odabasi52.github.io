@@ -46,6 +46,7 @@ BloodHound did not reveal any further actionable information. I then used ldapse
 ![10 - user flag](https://github.com/user-attachments/assets/e2708dd5-162b-4244-a36c-41e9700faf95)
 
 ## Privilege Escalation
+### First Way
 At this point, it was confirmed that the user had PSRemote access and GenericAll privileges over the Domain Controller computer object. I proceeded to exploit this using an administrator delegation attack. By following the necessary steps and leveraging tools such as PowerMad, PowerView, and Rubeus, I was able to obtain a Kerberos TGT for the administrator account.
 
 ![11 - privesc part 1](https://github.com/user-attachments/assets/dab832a3-c054-4e8c-9622-0c960c9f1371)
@@ -56,6 +57,16 @@ Using the obtained Kerberos ticket, I authenticated with psexec.py via Kerberos 
 
 ![13 - got the admin](https://github.com/user-attachments/assets/387c8fca-49c6-44dd-bc20-f5267b3bd788)
 
+### Second Way
+An alternative privilege escalation method involved resetting the Domain Controller computer account password, authenticating using the updated credentials, dumping the NTDS.dit database, and then performing a pass-the-hash attack to obtain administrator access.
+
+![14 - second way](https://github.com/user-attachments/assets/81765db9-3683-4cf4-8d9b-1da99c22aaf0)
+
+![15 - dump](https://github.com/user-attachments/assets/98ada490-f8d3-4143-8871-0e124c0deb96)
+
+![16 - gg](https://github.com/user-attachments/assets/0721e534-eabe-463a-bc62-0cee4f600483)
+
+## Pwned
 With full administrative access achieved, the machine was effectively compromised.
 
 ![pwned](https://github.com/user-attachments/assets/81f16370-fefb-452f-8874-04cb2de9a82d)
