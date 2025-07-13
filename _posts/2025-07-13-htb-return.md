@@ -27,7 +27,7 @@ I started a listener and updated the server IP with my own. As a result, I was a
 
 ## Privilege Escalation
 ### Server Operators Group
-Privilege escalation was straightforward—the current service account was a member of the Server Operators group. I leveraged this by updating the binpath of the VMware Tools service (which runs with SYSTEM privileges) to execute nc.exe. After starting a listener and restarting the service, I received a SYSTEM shell.
+Privilege escalation was straightforward—the current service account was a member of the Server Operators group. I leveraged this by updating the binpath of the VMware Tools service (which runs with SYSTEM privileges) to execute nc.exe. After starting a listener and restarting the service, I received a SYSTEM shell. (Followed [this post](https://www.hackingarticles.in/windows-privilege-escalation-server-operator-group/))
 
 <img width="1546" height="687" alt="07 - privesc start" src="https://github.com/user-attachments/assets/b3555d9a-5f56-4436-ac43-d09ef32d59a4" />
 
