@@ -12,7 +12,7 @@ Using 'dig', I was able to obtain Domain controller's name.
 <img width="1113" height="544" alt="01 - DC" src="https://github.com/user-attachments/assets/ee581ae7-2665-4987-8286-b784d8899de6" />
 
 ### VHost Enumeration
-The website was static. So I did directory brute-force which revealed nothing. Then did chost enumeration which revealed 'school' domain.
+The website was static. So I did directory brute-force which revealed nothing. Then did vhost enumeration which revealed 'school' domain.
 
 <img width="1280" height="502" alt="02 - subdomain" src="https://github.com/user-attachments/assets/fd395479-85e1-48b9-92e4-46a0dc0df84c" />
 
