@@ -8,6 +8,7 @@ Initial Nmap scan revealed HTTP, SMB, LDAP, Kerberos, MSSQL and WinRM Ports.
 
 ### RID Brute Forcing
 I tried anonymous ldapsearch and SMB null session which did not reveal anything. Then I did vhost and directory enumeration for HTTP site and it also did not reveal anything.
+
 Then after some search, I found that it is possible to brute force RIDs if the SMB Null session has read access to IPC$. So I did that and created a userList
 
 <img width="1661" height="731" alt="01 - rid brute" src="https://github.com/user-attachments/assets/6aff763b-bc19-4517-a740-9ade3b86cfca" />
@@ -15,6 +16,7 @@ Then after some search, I found that it is possible to brute force RIDs if the S
 ## Exploitation
 ### Brute Force 
 Then using the userList, I created an password list that includes reverse and direct usernames.
+
 Then using this credentials I applied a brute force attack for SMB. (At first I tried it with kerbrute which did not reveal anything useful)
 
 <img width="1570" height="833" alt="02 - brute force" src="https://github.com/user-attachments/assets/cc104a9d-2c37-4dc0-8ec0-a4891a6a3dfa" />
@@ -25,6 +27,7 @@ After finding the valid password I checked SMB Shares but non of the shares were
 <img width="1472" height="260" alt="03 - mssql" src="https://github.com/user-attachments/assets/6bc2658e-70ff-460a-95f8-ef15f4761abe" />
 
 I then tried xp_cmdshell which was blocked. Used xp_dirtree to capture hash with responder but it was a machine account so I could not do anything useful. 
+
 Then again using xp_dirtree I simply enumerated the files. I got access to the inetpub folder and enumerating it I found website backup zip file. 
 
 <img width="720" height="413" alt="04 - backup?" src="https://github.com/user-attachments/assets/6768e73d-ee85-4747-b60a-e466f0140eae" />
@@ -40,6 +43,7 @@ And using evil-winrm I got the user flag.
 
 ## Privilege Escalation
 I then used bloodhound and winPEAS but could not find anything useful. Only useful information was network listening service certsrv. 
+
 So I thought maybe the machine is about AD certifications. I then ran certipy.
 
 <img width="1055" height="285" alt="07 - certipy-ad" src="https://github.com/user-attachments/assets/f9d20b3d-1646-4e6f-90aa-deda5c45d9db" />
