@@ -19,7 +19,7 @@ Current user olivia had generic all permissions over michael. So I force-changed
 <img width="466" height="37" alt="05 - force change" src="https://github.com/user-attachments/assets/99f06a7c-028c-4a84-ae5a-4fc9b71a2321" />
 
 ### Getting Benjamin
-Michael can change benjamin's password forcibly. So I hcanged benjamin's password.
+Michael can change benjamin's password forcibly. So I changed benjamin's password.
 
 <img width="511" height="237" alt="06 - bejamin" src="https://github.com/user-attachments/assets/68e526ce-1199-4c25-8415-74777f4520a2" />
 
