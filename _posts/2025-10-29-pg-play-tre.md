@@ -17,7 +17,7 @@ Then applied additional brute forcing to mantisbt directory which revealed confi
 
 Visiting the config endoint revealed a file named 'a.txt' which included database username and password.
 
-<img width="1112" height="436" alt="04 - adminer" src="https://github.com/user-attachments/assets/d8cb593b-9cd8-4011-a011-8fff80e89adb" />
+<img width="1030" height="661" alt="03 - atxt" src="https://github.com/user-attachments/assets/c555c9d7-5549-4593-8e68-48683b09c139" />
 
 ## Exploitation
 ### Adminer
