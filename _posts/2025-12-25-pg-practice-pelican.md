@@ -2,7 +2,7 @@
 
 ## Enumeration
 ### Nmap 
-Initial Nmap scan revealed Port 8000, 8001, SMB and SSH ports were open.
+Initial Nmap scan revealed Port 8080, 8081, SMB and SSH ports were open.
 
 <img width="1054" height="700" alt="00 - nmap" src="https://github.com/user-attachments/assets/4333dc02-e80c-4578-b3b7-730679c560ce" />
 
