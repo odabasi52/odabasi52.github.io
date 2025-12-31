@@ -1,3 +1,130 @@
+body {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Post list styling */
+.post-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.post-item {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border-color-01, #e5e5e5);
+}
+
+.post-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.post-item h2 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.post-item .post-link {
+  text-decoration: none;
+}
+
+.post-item .post-link:hover {
+  text-decoration: underline;
+}
+
+.post-item .post-meta {
+  font-size: 0.85rem;
+  color: var(--post-meta-color, #666);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.post-excerpt {
+  margin: 0.5rem 0;
+  color: var(--post-excerpt-color, #666);
+  line-height: 1.6;
+}
+
+/* Pagination styling */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin: 3rem 0 2rem 0;
+  padding: 1.5rem;
+  border-top: 1px solid var(--border-color-01, #e5e5e5);
+}
+
+.pagination .page-link {
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border-color-01, #e5e5e5);
+  border-radius: 4px;
+  text-decoration: none;
+  color: var(--link-color, #0969da);
+  transition: all 0.2s ease;
+  min-width: 2.5rem;
+  text-align: center;
+}
+
+.pagination .page-link:hover:not(.disabled):not(.current) {
+  background-color: var(--code-bg-color, #f6f8fa);
+  border-color: var(--link-color, #0969da);
+}
+
+.pagination .page-link.current {
+  background-color: var(--link-color, #0969da);
+  color: white;
+  border-color: var(--link-color, #0969da);
+  cursor: default;
+  font-weight: bold;
+}
+
+.pagination .page-link.disabled {
+  color: var(--post-meta-color, #999);
+  border-color: var(--border-color-01, #e5e5e5);
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.pagination .page-numbers {
+  display: flex;
+  gap: 0.25rem;
+  flex-wrap: wrap;
+}
+
+/* Dark mode pagination */
+:root[data-theme="dark"] .pagination .page-link {
+  border-color: var(--border-color, #333);
+  color: var(--link-color, #58a6ff);
+}
+
+:root[data-theme="dark"] .pagination .page-link:hover:not(.disabled):not(.current) {
+  background-color: var(--code-bg, #0d1117);
+}
+
+:root[data-theme="dark"] .pagination .page-link.disabled {
+  color: #999;
+  border-color: var(--border-color, #333);
+}
+
+:root[data-theme="dark"] .post-meta,
+:root[data-theme="dark"] .post-excerpt {
+  color: #b0b0b0;
+}
+
+:root[data-theme="dark"] .post-item {
+  border-bottom-color: var(--border-color, #333);
+}
+
+:root[data-theme="dark"] .pagination {
+  border-top-color: var(--border-color, #333);
+}
+
 hr {
   margin-top: 30px;
   margin-bottom: 20px;

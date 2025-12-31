@@ -28,6 +28,10 @@ kramdown:
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-paginate
+
+paginate: 10
+paginate_path: "/page/:num/"
 
 titles_from_headings:
   strip_title: true
