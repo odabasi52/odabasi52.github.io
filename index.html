@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 ---
 
 <h1 class="page-heading">Posts</h1>
@@ -7,7 +7,7 @@ layout: default
 <p class="rss-subscribe">Subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
 
 <div class="post-list">
-  {%- for post in paginator.posts -%}
+  {% for post in paginator.posts %}
   <div class="post-item">
     <h2>
       <a class="post-link" href="{{ post.url | relative_url }}">
@@ -15,48 +15,48 @@ layout: default
       </a>
     </h2>
     <span class="post-meta">
-      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+      {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
       {{ post.date | date: date_format }}
-      {%- if post.author -%}
+      {% if post.author %}
         • {{ post.author }}
-      {%- endif -%}
+      {% endif %}
     </span>
-    {%- if post.excerpt -%}
+    {% if post.excerpt %}
     <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
-    {%- endif -%}
+    {% endif %}
   </div>
-  {%- endfor -%}
+  {% endfor %}
 </div>
 
 <!-- Pagination -->
 <div class="pagination">
-  {%- if paginator.previous_page -%}
-    {%- if paginator.previous_page == 1 -%}
+  {% if paginator.previous_page %}
+    {% if paginator.previous_page == 1 %}
     <a href="{{ '/' | relative_url }}" class="page-link">← Previous</a>
-    {%- else -%}
+    {% else %}
     <a href="{{ '/page/' | append: paginator.previous_page | relative_url }}" class="page-link">← Previous</a>
-    {%- endif -%}
-  {%- else -%}
+    {% endif %}
+  {% else %}
     <span class="page-link disabled">← Previous</span>
-  {%- endif -%}
+  {% endif %}
 
   <div class="page-numbers">
-    {%- for page in (1..paginator.total_pages) -%}
-      {%- if page == paginator.page -%}
+    {% for page in (1..paginator.total_pages) %}
+      {% if page == paginator.page %}
       <span class="page-link current">{{ page }}</span>
-      {%- elsif page == 1 -%}
+      {% elsif page == 1 %}
       <a href="{{ '/' | relative_url }}" class="page-link">{{ page }}</a>
-      {%- else -%}
+      {% else %}
       <a href="{{ '/page/' | append: page | relative_url }}" class="page-link">{{ page }}</a>
-      {%- endif -%}
-    {%- endfor -%}
+      {% endif %}
+    {% endfor %}
   </div>
 
-  {%- if paginator.next_page -%}
+  {% if paginator.next_page %}
   <a href="{{ '/page/' | append: paginator.next_page | relative_url }}" class="page-link">Next →</a>
-  {%- else -%}
+  {% else %}
     <span class="page-link disabled">Next →</span>
-  {%- endif -%}
+  {% endif %}
 </div>
 
 <p class="bio-text">I'm passionate about OT security, cybersecurity research, and cloud computing, with a strong focus on identifying security vulnerabilities and exploring offensive security techniques. My work spans industrial control systems (ICS) security, IoT security, and penetration testing. I actively engage in Capture The Flag (CTF) competitions and continuously explore network security challenges. Through this blog, I share insights on cybersecurity, cloud technologies, offensive security strategies, and practical mitigation techniques to address evolving security risks.</p>
