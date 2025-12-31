@@ -107,6 +107,14 @@ body {
   background-color: var(--code-bg, #0d1117);
 }
 
+:root[data-theme="dark"] .pagination .page-link.current {
+  background-color: var(--link-color, #58a6ff);
+  color: #000;
+  border-color: var(--link-color, #58a6ff);
+  cursor: default;
+  font-weight: bold;
+}
+
 :root[data-theme="dark"] .pagination .page-link.disabled {
   color: #999;
   border-color: var(--border-color, #333);
