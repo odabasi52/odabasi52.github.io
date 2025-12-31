@@ -14,54 +14,78 @@ layout: default
 <p class="rss-subscribe">Subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
 
 <div class="post-list">
-  {% for post in paginator.posts %}
-  <div class="post-item">
-    <h2>
-      <a class="post-link" href="{{ post.url | relative_url }}">
-        {{ post.title | escape }}
-      </a>
-    </h2>
-    <span class="post-meta">
-      {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-      {{ post.date | date: date_format }}
-      {% if post.author %}
-        • {{ post.author }}
+  {% if paginator.posts %}
+    {% for post in paginator.posts %}
+    <div class="post-item">
+      <h2>
+        <a class="post-link" href="{{ post.url | relative_url }}">
+          {{ post.title | escape }}
+        </a>
+      </h2>
+      <span class="post-meta">
+        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+        {{ post.date | date: date_format }}
+        {% if post.author %}
+          • {{ post.author }}
+        {% endif %}
+      </span>
+      {% if post.excerpt %}
+      <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
       {% endif %}
-    </span>
-    {% if post.excerpt %}
-    <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
-    {% endif %}
-  </div>
-  {% endfor %}
+    </div>
+    {% endfor %}
+  {% else %}
+    {% for post in site.posts limit:10 %}
+    <div class="post-item">
+      <h2>
+        <a class="post-link" href="{{ post.url | relative_url }}">
+          {{ post.title | escape }}
+        </a>
+      </h2>
+      <span class="post-meta">
+        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+        {{ post.date | date: date_format }}
+        {% if post.author %}
+          • {{ post.author }}
+        {% endif %}
+      </span>
+      {% if post.excerpt %}
+      <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+      {% endif %}
+    </div>
+    {% endfor %}
+  {% endif %}
 </div>
 
 <!-- Pagination -->
 <div class="pagination">
-  {% if paginator.previous_page %}
-    {% if paginator.previous_page == 1 %}
-    <a href="{{ '/' | relative_url }}" class="page-link">← Previous</a>
-    {% else %}
-    <a href="{{ '/page/' | append: paginator.previous_page | relative_url }}" class="page-link">← Previous</a>
-    {% endif %}
-  {% else %}
-    <span class="page-link disabled">← Previous</span>
-  {% endif %}
-
-  <div class="page-numbers">
-    {% for page in (1..paginator.total_pages) %}
-      {% if page == paginator.page %}
-      <span class="page-link current">{{ page }}</span>
-      {% elsif page == 1 %}
-      <a href="{{ '/' | relative_url }}" class="page-link">{{ page }}</a>
+  {% if paginator.total_pages > 1 %}
+    {% if paginator.previous_page %}
+      {% if paginator.previous_page == 1 %}
+      <a href="{{ '/' | relative_url }}" class="page-link">← Previous</a>
       {% else %}
-      <a href="{{ '/page/' | append: page | relative_url }}" class="page-link">{{ page }}</a>
+      <a href="{{ '/page/' | append: paginator.previous_page | relative_url }}" class="page-link">← Previous</a>
       {% endif %}
-    {% endfor %}
-  </div>
+    {% else %}
+      <span class="page-link disabled">← Previous</span>
+    {% endif %}
 
-  {% if paginator.next_page %}
-  <a href="{{ '/page/' | append: paginator.next_page | relative_url }}" class="page-link">Next →</a>
-  {% else %}
-    <span class="page-link disabled">Next →</span>
+    <div class="page-numbers">
+      {% for page in (1..paginator.total_pages) %}
+        {% if page == paginator.page %}
+        <span class="page-link current">{{ page }}</span>
+        {% elsif page == 1 %}
+        <a href="{{ '/' | relative_url }}" class="page-link">{{ page }}</a>
+        {% else %}
+        <a href="{{ '/page/' | append: page | relative_url }}" class="page-link">{{ page }}</a>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    {% if paginator.next_page %}
+    <a href="{{ '/page/' | append: paginator.next_page | relative_url }}" class="page-link">Next →</a>
+    {% else %}
+      <span class="page-link disabled">Next →</span>
+    {% endif %}
   {% endif %}
 </div>
