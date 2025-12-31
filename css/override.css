@@ -195,3 +195,51 @@ hr {
   font-size: 2.5em;
   opacity: 0.3;
 }
+
+/* Post filter styling */
+.post-filter-container {
+  margin-bottom: 2rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.post-filter-input {
+  flex: 1;
+  max-width: 600px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 2px solid var(--border-color-01, #e5e5e5);
+  border-radius: 4px;
+  background-color: var(--background-color, #fff);
+  color: var(--text-color, #333);
+  transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.post-filter-input:focus {
+  outline: none;
+  border-color: var(--brand-color, #2a7ae2);
+  box-shadow: 0 0 0 3px rgba(42, 122, 226, 0.1);
+}
+
+.post-filter-input::placeholder {
+  color: var(--post-meta-color, #999);
+  opacity: 0.7;
+}
+
+.filter-result-count {
+  font-size: 0.9rem;
+  color: var(--post-meta-color, #666);
+  white-space: nowrap;
+}
+
+.post-item.hidden {
+  display: none;
+}
+
+.no-results-message {
+  text-align: center;
+  padding: 2rem;
+  color: var(--post-meta-color, #666);
+  font-size: 1.1rem;
+}
