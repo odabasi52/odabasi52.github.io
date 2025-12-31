@@ -29,7 +29,9 @@ layout: default
           • {{ post.author }}
         {% endif %}
       </span>
-      {% if post.excerpt %}
+      {% if post.summary %}
+      <p class="post-summary">{{ post.summary }}</p>
+      {% elsif post.excerpt %}
       <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
       {% endif %}
     </div>
@@ -49,7 +51,9 @@ layout: default
           • {{ post.author }}
         {% endif %}
       </span>
-      {% if post.excerpt %}
+      {% if post.summary %}
+      <p class="post-summary">{{ post.summary }}</p>
+      {% elsif post.excerpt %}
       <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
       {% endif %}
     </div>

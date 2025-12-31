@@ -1,3 +1,9 @@
+---
+layout: post
+title: "Astronaut - Proving Grounds Practice"
+summary: "Exploited Grav CMS unauthenticated RCE vulnerability (CVE-2021-21425) and escalated privileges using SUID PHP binary."
+---
+
 # Astronaut - Proving Grounds Practice
 
 ## Enumeration

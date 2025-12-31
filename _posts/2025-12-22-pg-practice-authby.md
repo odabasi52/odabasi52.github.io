@@ -1,3 +1,9 @@
+---
+layout: post
+title: "AuthBy - Proving Grounds Practice"
+summary: "Exploited FTP credentials to access .htpasswd files, cracked hashes with hashcat, and uploaded reverse PHP shell."
+---
+
 # AuthBy - Proving Grounds Practice
 
 ## Enumeration

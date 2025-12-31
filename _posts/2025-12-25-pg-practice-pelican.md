@@ -1,3 +1,9 @@
+---
+layout: post
+title: "Pelican - Proving Grounds Practice"
+summary: "Exploited Exhibitor application RCE, leveraged gcore SUID privileges to dump process memory and extract plaintext credentials."
+---
+
 # Pelican - Proving Grounds Practice
 
 ## Enumeration

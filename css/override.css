@@ -47,6 +47,17 @@ body {
   line-height: 1.6;
 }
 
+.post-summary {
+  margin: 0.5rem 0;
+  color: var(--post-excerpt-color, #666);
+  line-height: 1.6;
+  font-weight: 500;
+  padding: 0.75rem;
+  background-color: var(--summary-bg, #f9f9f9);
+  border-left: 4px solid var(--link-color, #0969da);
+  border-radius: 4px;
+}
+
 /* Pagination styling */
 .pagination {
   display: flex;
@@ -122,6 +133,12 @@ body {
 
 :root[data-theme="dark"] .post-meta,
 :root[data-theme="dark"] .post-excerpt {
+  color: #b0b0b0;
+}
+
+:root[data-theme="dark"] .post-summary {
+  background-color: #222;
+  border-left-color: var(--link-color, #58a6ff);
   color: #b0b0b0;
 }
 

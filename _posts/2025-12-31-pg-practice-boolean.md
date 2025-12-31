@@ -1,3 +1,9 @@
+---
+layout: post
+title: "Boolean - Proving Grounds Practice"
+summary: "Bypassed confirmation via parameter manipulation, exploited path traversal vulnerability, and uploaded SSH authorized_keys for authentication."
+---
+
 # Boolean - Proving Grounds Practice
 
 ## Enumeration

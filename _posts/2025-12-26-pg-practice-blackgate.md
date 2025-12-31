@@ -1,3 +1,9 @@
+---
+layout: post
+title: "BlackGate - Proving Grounds Practice"
+summary: "Exploited unauthenticated Redis RCE vulnerability using RedisModules-ExecuteCommand to gain initial shell access."
+---
+
 # BlackGate - Proving Grounds Practice
 
 ## Enumeration
