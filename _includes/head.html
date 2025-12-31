@@ -11,6 +11,7 @@
 
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
   <link rel="stylesheet" type="text/css" href="/css/override.css">
+  <link rel="stylesheet" type="text/css" href="/css/theme.css">
 
   {% feed_meta %}
 
@@ -32,4 +33,10 @@
 
   <script type="text/javascript"> hljs.highlightAll(); </script>
   <!-- end highlight.js support -->
+
+  <!-- Theme toggle script -->
+  <script src="/js/theme-toggle.js"></script>
 </head>
+
+<body>
+  {% include theme-toggle.html %}

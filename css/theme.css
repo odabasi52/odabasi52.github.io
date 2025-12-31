@@ -1,0 +1,178 @@
+/* Dark/Light Mode Theme */
+
+/* Light mode (default) */
+:root[data-theme="light"],
+:root:not([data-theme]) {
+  color-scheme: light;
+}
+
+/* Dark mode */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+/* Theme toggle button */
+#theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: 2px solid var(--border-color-01);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+#theme-toggle:hover {
+  background-color: var(--background-color);
+  transform: scale(1.1);
+}
+
+/* Dark mode specific styles */
+:root[data-theme="dark"] {
+  --background-color: #1a1a1a;
+  --text-color: #e0e0e0;
+  --border-color: #333;
+  --code-bg: #0d1117;
+  --link-color: #58a6ff;
+  --accent-color: #1f6feb;
+}
+
+/* Light mode specific styles */
+:root[data-theme="light"],
+:root:not([data-theme]) {
+  --background-color: #ffffff;
+  --text-color: #333333;
+  --border-color: #e5e5e5;
+  --code-bg: #f6f8fa;
+  --link-color: #0969da;
+  --accent-color: #0969da;
+}
+
+/* Apply theme to body */
+:root[data-theme="dark"] {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Dark mode overrides for text */
+:root[data-theme="dark"] body {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+}
+
+:root[data-theme="dark"] a {
+  color: var(--link-color);
+}
+
+:root[data-theme="dark"] a:visited {
+  color: #8957e5;
+}
+
+/* Dark mode for code blocks */
+:root[data-theme="dark"] code,
+:root[data-theme="dark"] pre {
+  background-color: var(--code-bg);
+  color: #e0e0e0;
+  border-color: var(--border-color);
+}
+
+:root[data-theme="dark"] .highlight {
+  background-color: var(--code-bg);
+}
+
+/* Dark mode for blockquotes */
+:root[data-theme="dark"] blockquote {
+  color: #b0b0b0;
+  border-left-color: var(--border-color);
+}
+
+/* Dark mode for tables */
+:root[data-theme="dark"] table {
+  border-collapse: collapse;
+}
+
+:root[data-theme="dark"] table tr {
+  background-color: #222;
+  border-color: var(--border-color);
+}
+
+:root[data-theme="dark"] table tr:nth-child(2n) {
+  background-color: #1a1a1a;
+}
+
+:root[data-theme="dark"] th,
+:root[data-theme="dark"] td {
+  border-color: var(--border-color);
+  color: #e0e0e0;
+}
+
+/* Dark mode for headers */
+:root[data-theme="dark"] h1,
+:root[data-theme="dark"] h2,
+:root[data-theme="dark"] h3,
+:root[data-theme="dark"] h4,
+:root[data-theme="dark"] h5,
+:root[data-theme="dark"] h6 {
+  color: #e0e0e0;
+}
+
+/* Dark mode for horizontal rules */
+:root[data-theme="dark"] hr {
+  border-color: var(--border-color);
+}
+
+/* Dark mode for post navigation */
+:root[data-theme="dark"] .post_navi-item {
+  color: var(--link-color);
+}
+
+:root[data-theme="dark"] .post_navi-item:hover {
+  background-color: #222;
+}
+
+/* Dark mode for inputs and forms */
+:root[data-theme="dark"] input,
+:root[data-theme="dark"] textarea,
+:root[data-theme="dark"] select {
+  background-color: #222;
+  color: #e0e0e0;
+  border-color: var(--border-color);
+}
+
+:root[data-theme="dark"] input:focus,
+:root[data-theme="dark"] textarea:focus,
+:root[data-theme="dark"] select:focus {
+  background-color: #333;
+  border-color: var(--link-color);
+}
+
+/* Smooth theme transitions */
+body,
+code,
+pre,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+blockquote,
+table,
+tr,
+th,
+td,
+hr,
+input,
+textarea,
+select {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
