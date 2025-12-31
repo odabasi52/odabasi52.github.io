@@ -1,3 +1,9 @@
+---
+layout: post
+title: "Intelligence - Hack The Box"
+summary: "Brute-forced PDF documents with YYYY-MM-DD-upload.pdf naming scheme, extracted Creator metadata from PDFs using exiftool to build username list, validated usernames with Kerbrute, found default password in PDFs, password-sprayed to find valid credentials, accessed SMB shares and obtained user flag, performed ADIDNS poisoning via dnstool to add web.* DNS record (users allowed to add non-existent records), set up responder to capture NTLMv2 hash, cracked hash, used BloodHound to find GMSA read permission via ITSupport group, dumped GMSA password with GMSADumper, exploited delegation permissions to request Administrator Kerberos ticket via impacket GetST, used psexec.py with Kerberos ticket for admin shell."
+---
+
 # Intelligence - Hack The Box
 
 ## Enumeration

@@ -1,3 +1,9 @@
+---
+layout: post
+title: "Broker - Hack The Box"
+summary: "Accessed ActiveMQ web console with default credentials admin:admin, enumerated version via admin page, identified ActiveMQ vulnerable to CVE-2023-46604 RCE, modified poc-linux.xml exploit and executed to gain reverse shell, obtained activemq user access, discovered sudo privilege to run nginx, exploited nginx sudo privilege via custom configuration to create SSH root access, gained root shell."
+---
+
 # Broker - Hack The Box
 
 ## Enumeration

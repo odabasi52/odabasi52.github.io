@@ -1,3 +1,9 @@
+---
+layout: post
+title: "Twiggy - Proving Grounds Practice"
+summary: "SaltStack ZeroMQ ports (4505, 4506) + Salt API 3000-1 discovery on port 8000 → SaltStack API unauthenticated RCE vulnerability → command injection for file read (/etc/passwd and /etc/shadow) → passwd file write access via command injection → /etc/passwd privilege escalation (adding custom root user with UID 0) → SSH access with new root credentials"
+---
+
 # Twiggy - Proving Grounds Practice
 
 ## Enumeration

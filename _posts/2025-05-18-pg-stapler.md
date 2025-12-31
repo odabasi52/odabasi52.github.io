@@ -1,3 +1,9 @@
+---
+layout: post
+title: "Stapler - OffSec Proving Grounds"
+summary: "Found WordPress blog in robots.txt, enumerated users with WPScan, brute-forced admin credentials with rockyou.txt, uploaded PHP reverse shell as plugin, gained shell access, found peter SSH credentials in .bash_history with sudo NOPASSWD privileges, escalated to root."
+---
+
 # Stapler - OffSec Proving Grounds
 
 ## Objective

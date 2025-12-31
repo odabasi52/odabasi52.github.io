@@ -1,3 +1,9 @@
+---
+layout: post
+title: "Vegeta1 - Proving Grounds Play"
+summary: "robots.txt discovery → find_me endpoint with double base64-encoded comment → QR code decoding via zbarimg tool → extended directory brute-force → bulma endpoint with .wav file → Morse code audio decoding → SSH credentials (trunks:vegeta1) → linpeas /etc/passwd write permission → /etc/passwd privilege escalation via custom root entry with UID 0"
+---
+
 # Vegeta1 - Proving Grounds Play
 
 ## Enumeration

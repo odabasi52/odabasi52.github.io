@@ -1,3 +1,9 @@
+---
+layout: post
+title: "Phantom - Hack The Box"
+summary: "Found base64-encoded PDF in SMB Public share revealing default password, performed RID brute-forcing via SMB IPC$ null access to enumerate users, password-sprayed to find valid credentials, accessed Department share, found encrypted .hc Veracrypt backup file, cracked password with hashcat using company name and mutation rules, decrypted backup revealing LDAP credentials, escalated through lateral movement chain (olivia -> mark -> fiona), gained shell as fiona, discovered fiona had Kerberoasting-capable SPN, cracked Kerberos ticket for mark_admin account, escalated to mark_admin (Admin group member), dumped ntds.dit via secretsdump.py for administrator hash, escalated to admin."
+---
+
 # Phantom - Hack The Box
 
 ## Enumeration

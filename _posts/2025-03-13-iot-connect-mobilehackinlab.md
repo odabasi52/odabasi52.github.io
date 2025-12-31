@@ -1,3 +1,9 @@
+---
+layout: post
+title: "IOT Connect Lab Solution - MobileHackingLab"
+summary: "Reverse engineered Android app with JADX finding exported LoginActivity, analyzed dynamically created Broadcast Receiver expecting MASTER_ON action with AES-encrypted key parameter, brute-forced 3-digit PIN (000-999) to find correct decryption key, started LoginActivity intent, sent MASTER_ON broadcast with correct PIN."
+---
+
 ## IOT Connect Lab Solution - MobileHackingLab
 
 ### Objective

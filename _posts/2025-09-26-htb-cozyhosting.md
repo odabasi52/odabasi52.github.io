@@ -1,3 +1,9 @@
+---
+layout: post
+title: "CozyHosting - Hack The Box"
+summary: "Spring Boot actuator endpoint discovery → actuator/sessions enumeration for valid JSESSIONID → kanderson user session hijacking → executessh command injection (tab encoding via \\t or ${IFS} bypass) → reverse shell as app user → JAR file extraction and analysis → application.properties database credentials → PostgreSQL access and users table enumeration → password hash cracking (admin credentials) → SSH access → sudo ssh via GTFOBins"
+---
+
 # CozyHosting - Hack The Box
 
 ## Enumeration

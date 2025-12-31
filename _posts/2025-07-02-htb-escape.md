@@ -1,3 +1,9 @@
+---
+layout: post
+title: "Escape - Hack The Box"
+summary: "Found Public SMB share containing SQL Procedures PDF with guest credentials, authenticated to MSSQL as guest, executed xp_dirtree to capture NetNTLMv2 hash of sql_svc, cracked service account hash, harvested user (ryan) credentials from SQL Server logs, gained user shell via Evil-WinRM, enumerated ADCS with Certipy and identified ESC1 vulnerability, requested ADCS certificate impersonating Administrator, extracted Administrator NTLM hash from Kerberos TGT, gained admin shell via pass-the-hash."
+---
+
 # Escape - Hack The Box
 
 ## Enumeration

@@ -1,3 +1,9 @@
+---
+layout: post
+title: "Gaara - Proving Grounds Play"
+summary: "Directory brute-force → story content endpoints (rabbit holes) → SSH username enumeration (gaara:gaara) → password brute-force → SUID GIMP and GDB discovery → SUID GDB privilege escalation via GTFOBins (copy binary with SUID bit set)"
+---
+
 # Gaara - Proving Grounds Play
 
 ## Enumeration

@@ -1,3 +1,9 @@
+---
+layout: post
+title: "Forest - Hack The Box"
+summary: "Enumerated users via Kerbrute and anonymous LDAP, identified svc-alfresco account with Kerberos pre-authentication disabled, exploited AS-REP Roasting to capture and crack AS-REP hash, established Evil-WinRM shell, ran SharpHound discovery finding Account Operators has GenericAll over Exchange Windows Permissions, created new user in Exchange group, granted DCSync permissions via ACL modification using PowerView, performed DCSync with secretsdump.py to extract Administrator NTLM hash, gained admin shell via pass-the-hash."
+---
+
 # Forest - Hack The Box
 
 ## Enumeration

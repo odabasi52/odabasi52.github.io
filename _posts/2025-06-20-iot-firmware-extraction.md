@@ -1,3 +1,9 @@
+---
+layout: post
+title: "IoT Firmware Extraction"
+summary: "Comprehensive guide covering firmware extraction methods: downloading from manufacturer websites, MITM interception of firmware updates, exploiting web interfaces/Telnet/SSH for shell access and using dd to dump memory, hardware UART/SPI/JTAG interfaces via OpenOCD or programmers, I²C EEPROM reading, and chip-off desoldering when other access methods are unavailable."
+---
+
 # IoT Firmware Extraction
 
 ## Introduction

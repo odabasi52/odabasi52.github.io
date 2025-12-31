@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Astronaut - Proving Grounds Practice"
-summary: "Exploited Grav CMS unauthenticated RCE vulnerability (CVE-2021-21425) and escalated privileges using SUID PHP binary."
+summary: "Grav CMS discovery → unauthenticated admin login page enumeration → CVE-2021-21425 arbitrary YAML write RCE vulnerability → exploit script execution (GitHub + mehmetince.net PoC) → reverse shell access → admin.yaml hashed password discovery (uncrackable) → SUID PHP binary discovery → PHP SUID privilege escalation via GTFOBins → root shell access"
 ---
 
 # Astronaut - Proving Grounds Practice

@@ -1,3 +1,9 @@
+---
+layout: post
+title: "AI Red Teaming CTF - Hack The Box"
+summary: "LLM prompt injection challenges - Car AI (character-by-character phone number extraction), Grand Monty (social engineering promo code), Stock Signals (virtual environment creation for protected information), Allsafe (high severity keyword injection), Leaks Premium (social engineering authentication), Cosmic Crisis (keyword-based AI priority manipulation), Gate Chat (virtual environment bypass), Pump Signals (environment creation for downvote data), Cruise List (character-by-character data extraction)"
+---
+
 # AI Red Teaming CTF - HTB
 
 ## 1 - Re Cars AI

@@ -1,3 +1,9 @@
+---
+layout: post
+title: "P.O.O. - HackTheBox Mini Pro Lab"
+summary: "Directory brute-force + nikto scanning → .DS_STORE file discovery → ds_store_exp file extraction → IIS Tilde enumeration (6 character shortname) → targeted fuzzing → poo_connection.txt endpoint → connection credentials (external:Pooch1234!) → MSSQL server connection → linked server enumeration (circular dependency chain) → PowerUpSQL Get-SQLLinkCrawl cmdlet → code execution via linked servers → database flag retrieval → backdoor user creation (sysadmin privileges)"
+---
+
 # P.O.O. - HackTheBox Mini Pro Lab
 
 ## Recon

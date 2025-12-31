@@ -1,3 +1,9 @@
+---
+layout: post
+title: "Seppuku - Proving Grounds Play"
+summary: "Directory brute-force (non-standard ports) → SSH keys and password lists discovery → FTP credential brute-force (seppuku:seppuku) → restricted bash (rbash) bypass via SSH -t flag → tanto user SSH key reuse → samurai user password from .passwd file → /home/tanto/.cgi_bin/bin wildcard path traversal via sudo NOPASSWD → malicious binary creation → /bin/bash SUID privilege escalation"
+---
+
 # Seppuku - Proving Grounds Play
 
 ## Enumeration

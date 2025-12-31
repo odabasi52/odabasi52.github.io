@@ -1,3 +1,9 @@
+---
+layout: post
+title: "Administrator - Hack The Box"
+summary: "Started with initial user (olivia) with GenericAll over michael, force-changed michael's password, discovered michael had ForceChangePassword over benjamin, changed benjamin's password, confirmed benjamin had FTP read access, downloaded encrypted backup file from FTP, cracked PwSafe encrypted backup using pwsafe2john with Hashcat, extracted emily user credentials from decrypted PwSafe, escalated to emily, used BloodHound discovering emily had GenericWrite over ethan, applied targeted Kerberoasting (assigned SPN to ethan, requested TGS ticket), cracked Kerberos ticket with Hashcat, verified ethan had DCSync permissions, performed DCSync with secretsdump.py using ethan credentials, extracted Administrator NTLM hash, escalated to admin."
+---
+
 # Administrator - Hack The Box
 
 ## Enumeration

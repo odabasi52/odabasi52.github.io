@@ -1,3 +1,9 @@
+---
+layout: post
+title: "SoSimple - Proving Grounds Play"
+summary: "WordPress discovery via directory brute-force → WPScan user enumeration → Social Warfare plugin RCE vulnerability → payload hosting and admin-post.php exploitation → reverse shell access → secret key file (rabbit hole) → SSH id_rsa file discovery (max user) → max SSH login → service command via sudo → Steven user escalation via GTFOBins → missing script for root access"
+---
+
 # SoSimple - Proving Grounds Play
 
 ## Enumeration

@@ -1,3 +1,9 @@
+---
+layout: post
+title: "Soccer - Hack The Box"
+summary: "Found Tiny File Manager with default credentials admin:admin@123, gained write access to uploads folder, uploaded PHP reverse shell for www-data access, discovered additional subdomain via /etc/hosts, registered account on new subdomain, exploited WebSocket SQL injection via sqlmap-websocket-proxy, extracted plaintext password from database using custom Python script (time-based SQLi bypass), escalated to player user via SSH, found keepass dump and kdbx file in player home, exploited CVE-2023-32784 memory dump vulnerability with keepass-dump-extractor tool, cracked KDBX master password, extracted PuTTy SSH key, converted to OpenSSH format with puttygen, gained root shell via SSH."
+---
+
 # Soccer - Hack The Box
 
 ## Enumeration

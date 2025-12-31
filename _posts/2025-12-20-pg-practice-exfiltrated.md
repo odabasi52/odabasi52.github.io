@@ -1,3 +1,9 @@
+---
+layout: post
+title: "Exfiltrated - Proving Grounds Practice"
+summary: "Subrion CMS v4.2.1 discovery → default credentials (admin:admin) → Subrion RCE exploitation → restricted webshell bypass via pentest monkey phar file upload → pspy64 process monitoring → cron job running as root with exiftool → CVE-2021-22204 exiftool djvu command injection → malicious image creation and upload → SUID bash privilege escalation"
+---
+
 # Exfiltrated - Proving Grounds Practice
 
 ## Enumeration

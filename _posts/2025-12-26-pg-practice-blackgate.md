@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "BlackGate - Proving Grounds Practice"
-summary: "Exploited unauthenticated Redis RCE vulnerability using RedisModules-ExecuteCommand to gain initial shell access."
+summary: "Unauthenticated Redis RCE vulnerability enumeration → RedisModules-ExecuteCommand compilation (GCC fixes for string.h, arpa/inet.h, const qualifiers, execve arguments) → Redis RCE execution → reverse shell access → sudo NOPASSWD redis-status privilege → binary strings password extraction → systemctl interactive prompt → !sh shell escape to SYSTEM shell → (alternate) PwnKit kernel exploit via linux-exploit-suggester"
 ---
 
 # BlackGate - Proving Grounds Practice

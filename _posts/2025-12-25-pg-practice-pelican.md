@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Pelican - Proving Grounds Practice"
-summary: "Exploited Exhibitor application RCE, leveraged gcore SUID privileges to dump process memory and extract plaintext credentials."
+summary: "SMB null enumeration (no useful shares) → Exhibitor application discovery on port 8080/8081 → Exhibitor RCE vulnerability exploitation → reverse shell access → sudo NOPASSWD gcore privilege discovery → password-store process enumeration via ps aux → gcore process memory dump of password-store → plaintext root password extraction from memory dump → root shell access"
 ---
 
 # Pelican - Proving Grounds Practice

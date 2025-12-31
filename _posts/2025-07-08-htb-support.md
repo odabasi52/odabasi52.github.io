@@ -1,3 +1,9 @@
+---
+layout: post
+title: "Support - Hack The Box"
+summary: "Downloaded UserInfo.exe from null SMB session, reverse engineered with ILSpy to find hardcoded credentials and decryption algorithm, recovered plaintext password, enumerated AD with BloodHound finding GenericAll over DC, escalated via administrator delegation attack using PowerMad/Rubeus to obtain Kerberos TGT, authenticated with psexec.py over Kerberos for admin access."
+---
+
 # Support - Hack The Box
 
 ## Enumeration

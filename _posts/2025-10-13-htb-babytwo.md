@@ -1,3 +1,9 @@
+---
+layout: post
+title: "BabyTwo - Hack The Box"
+summary: "SMB null enumeration → homes share username enumeration → RID brute-force → desktop.ini NTLM theft deployment via responder → credentials obtained (carl.moore:carl.moore) → sysvol share access via LDAP → startup script modification with reverse shell → login.vbs PowerShell reverse shell injection → BloodHound analysis (WriteDACL over GPOAdm) → ACL modification via bloodyAD → GenericAll over Group Policy Object → pyGPOAbuse for local administrators group privilege escalation"
+---
+
 # BabyTwo - Hack The Box
 
 ## Enumeration

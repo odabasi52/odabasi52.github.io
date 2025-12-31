@@ -1,3 +1,9 @@
+---
+layout: post
+title: "TombWatcher - Hack The Box"
+summary: "RID brute-force user enumeration → BloodHound analysis → WriteSPN privilege over alfred → targetedKerberoast ticket extraction → alfred credentials → AddSelf privilege to Infrastructure group via bloodyAD → ReadGMSAPassword (ansible_dev$ account) → netexec gmsa module → ForceChangePassword (sam user) → pth-net rpc password change with NT hash → WriteOwner (john access) → john credentials → PSRemote access → user flag"
+---
+
 # TombWatcher - Hack The Box
 
 ## Enumeration

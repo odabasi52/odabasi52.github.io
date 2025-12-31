@@ -1,3 +1,9 @@
+---
+layout: post
+title: "Blackfield - Hack The Box"
+summary: "Extracted usernames from anonymous SMB profiles$ share, used Kerbrute to validate users, exploited AS-REP Roasting on user without pre-authentication, cracked AS-REP ticket with Hashcat, used BloodHound to find ForceChangePassword permission over audit2020, changed audit2020 password, accessed audit2020's SMB share containing lsass.dmp, extracted NTLM hash from memory dump via mimikatz, leveraged SeBackupPrivilege to dump ntds.dit and SYSTEM hive, extracted all domain hashes via secretsdump.py."
+---
+
 # Blackfield - Hack The Box
 
 ## Enumeration

@@ -1,3 +1,9 @@
+---
+layout: post
+title: "Manager - Hack The Box"
+summary: "Leveraged SMB IPC$ null session read access for RID brute-forcing to enumerate domain users, created custom password list with username variations, brute-forced SMB credentials to find valid login, authenticated to MSSQL with found credentials, used xp_dirtree to enumerate inetpub folder discovering website backup ZIP file, extracted backup and found plaintext password for raven user in hidden files, established Evil-WinRM shell, ran Certipy enumeration discovering ESC7 vulnerability, exploited ESC7 following official Certipy wiki steps to extract Administrator NTLM hash, escalated to admin via psexec.py pass-the-hash."
+---
+
 # Manager - Hack The Box
 
 ## Enumeration

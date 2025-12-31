@@ -1,3 +1,9 @@
+---
+layout: post
+title: "Election - OffSec Proving Grounds"
+summary: "Discovered credentials in public logs page, accessed phpMyAdmin with default root:toor, SSH'd with discovered credentials, found Serv-U SUID binary, exploited CVE-2019-12181 for root shell."
+---
+
 # Election - OffSec Proving Grounds
 
 ## Objective

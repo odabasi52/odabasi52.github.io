@@ -1,3 +1,9 @@
+---
+layout: post
+title: "Cicada - Hack The Box"
+summary: "Accessed HR$ share via SMB null session finding default password for newcomers, used SMB IPC$ null access to perform RID brute-forcing for user enumeration, brute-forced SMB credentials with default password and user list to find valid user, queried LDAP with found credentials discovering additional password in description field, escalated to emily user via SMB share access (Dev share), accessed Emily via Evil-WinRM (had PSRemote), discovered emily had SeBackupPrivilege enabled, exploited SeBackupPrivilege to dump SYSTEM registry hive and SAM database, extracted Administrator NTLM hash via secretsdump, escalated to admin via psexec.py pass-the-hash."
+---
+
 # Cicada - Hack The Box
 
 ## Enumeration

@@ -1,3 +1,9 @@
+---
+layout: post
+title: "Sendai - Hack The Box"
+summary: "SMB null session RID brute-force → empty password spray → password update via smbpasswd → elliot.yates credentials → LDAP/BloodHound enumeration → mgtsvc account with WinRM access → hardcoded clifford credentials in non-common process → CA Operators membership → ADCS ESC4 exploitation → administrator hash via certipy"
+---
+
 # Sendai - Hack The Box
 
 ## Enumeration

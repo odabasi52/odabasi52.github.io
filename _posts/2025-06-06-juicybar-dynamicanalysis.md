@@ -1,3 +1,8 @@
+---
+layout: post
+title: "Juicy Bar CTF - Dynamic Code Analysis"
+summary: "Set up Frida dynamic instrumentation on Android emulator, hooked target functions to capture return values and bypass security checks, hooked UUID.toString() to override with specific UUID value, captured runtime encryption IV/key/values and converted hex to ASCII, brute-forced 4-digit PIN via Frida function calls with error handling, performed timing attack on 10-digit PIN by collecting 200 samples per digit to measure response times."
+---
 # Juicy Bar CTF - Dynamic Code Analysis
 In this post, we’ll walk through the solutions for all four dynamic analysis challenges.
 I followed the official Frida Android tutorial (https://frida.re/docs/android/) to set up Frida before starting the challenge.

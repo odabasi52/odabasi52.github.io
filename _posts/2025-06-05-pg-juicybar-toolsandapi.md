@@ -1,3 +1,8 @@
+---
+layout: post
+title: "Juicy Bar CTF - Tools and APIs"
+summary: "Captured Logcat for exposed flags with logging enabled, reversed APK to find expected timestamps and changed device date/time accordingly, called exported activities via Android intents, modified HTTP request boolean values, captured HTTPS traffic via Burp proxy with injected root certificate, hijacked external content provider by creating mock provider to capture flag insertions."
+---
 # Juicy Bar CTF - Tools and APIs
 In this post, we’ll walk through the solutions for all Tools and APIs solutions.
 

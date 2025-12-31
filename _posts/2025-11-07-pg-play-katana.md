@@ -1,3 +1,9 @@
+---
+layout: post
+title: "Katana - Proving Grounds Play"
+summary: "Directory brute-force → ebook endpoint SQLi (admin:admin extraction) → port 8088 directory enumeration → upload.html/upload.php → reverse shell PHP upload → manager portal (port 8715) access → reverse shell execution → linpeas SETUID capability discovery on python2.7 → SETUID python2.7 privilege escalation via -c flag"
+---
+
 # Katana - Proving Grounds Play
 
 ## Enumeration

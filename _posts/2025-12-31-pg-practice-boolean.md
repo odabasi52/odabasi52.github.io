@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Boolean - Proving Grounds Practice"
-summary: "Bypassed confirmation via parameter manipulation, exploited path traversal vulnerability, and uploaded SSH authorized_keys for authentication."
+summary: "User registration → confirmation bypass via user[confirmed]=true parameter manipulation → filemanager path traversal via cwd parameter → SSH authorized_keys file upload to ~/.ssh → SSH key-based authentication (remi user) → SSH too-many-authentication-failures SSH Agent issue → IdentitiesOnly=yes flag fix → root SSH key reuse with IdentitiesOnly flag"
 ---
 
 # Boolean - Proving Grounds Practice

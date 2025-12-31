@@ -1,3 +1,9 @@
+---
+layout: post
+title: "Algernon - Proving Grounds Practice"
+summary: "FTP anonymous enumeration (rabbit hole logs) → IIS tilde enumeration → SmarterMail 6919 discovery on port 9998 → CVE affecting version 6985 exploitation → SmarterMail unauthenticated RCE → SYSTEM shell access"
+---
+
 # Algernon - Proving Grounds Practice
 
 ## Enumeration

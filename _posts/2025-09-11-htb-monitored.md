@@ -1,3 +1,9 @@
+---
+layout: post
+title: "Monitored - Hack The Box"
+summary: "SNMP enumeration via snmpbulkwalk → svc user cleartext password extraction → Nagios XI API authentication token generation → CVE-2023-40931 authenticated SQL injection → xi_users table enumeration → API key extraction → admin user creation via API → Nagios command execution as root via health check process → reverse shell RCE"
+---
+
 # Monitored - Hack The Box
 
 ## Enumeration

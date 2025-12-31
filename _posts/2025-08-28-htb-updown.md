@@ -1,3 +1,9 @@
+---
+layout: post
+title: "UpDown - Hack The Box"
+summary: "Dumped publicly accessible .git repository using git-dumper tool, extracted source code revealing Special-Dev header requirement and file upload filter logic, bypassed file upload filter using .phar extension (phar protocol combined with zip compression), exploited phar include to upload and execute PHP reverse shell bypassing extension filters, gained www-data shell, discovered Python2 script with eval() vulnerability running as developer user, executed /bin/bash via eval to gain developer shell, copied SSH private key to establish SSH session, discovered sudo easy_install privilege, exploited GTFOBins easy_install technique to gain root shell."
+---
+
 # UpDown - Hack The Box
 
 ## Enumeration

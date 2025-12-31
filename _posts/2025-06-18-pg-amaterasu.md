@@ -1,3 +1,9 @@
+---
+layout: post
+title: "Amaterasu - OffSec Proving Grounds"
+summary: "Found REST API endpoints exposing command functionality, discovered username 'alfredo' via directory listing, exploited file upload path traversal to write outside /tmp, generated SSH key pair, renamed public key as id_rsa.txt (bypassed extension filter), uploaded to /home/alfredo/.ssh/authorized_keys, authenticated via SSH, found root crontab executing backup script every minute with custom PATH, created malicious 'tar' script in PATH, executed chmod +s /bin/bash when cron ran, gained root shell via /bin/bash -p."
+---
+
 # Amaterasu - OffSec Proving Grounds
 
 ## Objective

@@ -1,3 +1,9 @@
+---
+layout: post
+title: "Networked - Hack The Box"
+summary: "Directory brute-force → backup tar file extraction and analysis → upload.php MIME/magic/extension validation bypass via double extension (.php.png) → Apache misconfiguration RCE → cron job exploitation via command injection → base64 encoded bash command injection in check_ip.php → user shell access → sudo network-script manipulation → Red Hat /etc/sysconfig/network-scripts privilege escalation"
+---
+
 # Networked - Hack The Box
 
 ## Enumeration

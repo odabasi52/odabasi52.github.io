@@ -1,6 +1,10 @@
-# Flight - Hack The Box
+---
+layout: post
+title: "Flight - Hack The Box"
+summary: "Performed vhost enumeration to discover school.flight.htb subdomain, exploited LFI vulnerability pointing to attacker SMB share to capture authentication hash via Responder, cracked hash with Hashcat, generated user list via crackmapexec, applied password spraying finding user (s.moon) with reused password, discovered write access to SMB share, used ntlm_theft tool to upload phishing file and captured hash of another user (c.bum) via Responder, found c.bum had write access to Web share, uploaded PHP reverse shell to Web share for RCE, used RunAsCs to spawn reverse shell as c.bum user, discovered write access to inetpub folder and internal website on port 8000, used chisel for port forwarding, uploaded ASPX reverse shell executing as SYSTEM, obtained DC ticket via Rubeus delegation, synchronized time with DC, performed DCSync attack with secretsdump.py using Kerberos ticket, escalated to admin with extracted hash."
+---
 
-## Enumeration
+# Flight - Hack The Box
 ### Nmap
 Initial Nmap scan revealed SMB, Kerberos, HTTP and LDAP ports and a domain name.
 

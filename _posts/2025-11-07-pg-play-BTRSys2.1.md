@@ -1,3 +1,9 @@
+---
+layout: post
+title: "BTRSys2.1 - Proving Grounds Play"
+summary: "robots.txt → WordPress endpoint discovery → wpscan user enumeration → password brute-force (btrisk:btrisk) → WordPress admin theme editor (404.php) → reverse shell via theme file execution → wp-config.php database credentials → MySQL root password extraction → wp_users table enumeration → password hash cracking (root) → su root privilege escalation"
+---
+
 # BTRSys2.1 - Proving Grounds Play
 
 ## Enumeration

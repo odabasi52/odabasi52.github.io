@@ -1,3 +1,9 @@
+---
+layout: post
+title: "EscapeTwo - Hack The Box"
+summary: "Excel file extraction from SMB share via XLSX Viewer → MSSQL service account + oscar user credentials → MSSQL xp_cmdshell reverse shell → SQL config file exploitation (sql_svc password) → password reuse (ryan:ryan) → Evil-WinRM access → BloodHound WriteOwner to CA_SVC exploitation → ADCS ESC4 vulnerability → administrator hash via certipy"
+---
+
 # EscapeTwo - Hack The Box
 
 ## Enumeration

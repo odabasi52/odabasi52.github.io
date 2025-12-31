@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "AuthBy - Proving Grounds Practice"
-summary: "Exploited FTP credentials to access .htpasswd files, cracked hashes with hashcat, and uploaded reverse PHP shell."
+summary: "FTP anonymous enumeration → user discovery from .uac files → admin:admin credentials via brute-force → .htpasswd and .htaccess file access → Apache Basic Authentication hash cracking via hashcat → web portal login → reverse PHP shell upload via FTP put → SeImpersonatePrivilege check (Windows Server 2008 not vulnerable) → MS11-046 kernel vulnerability → kernel exploit execution via windows-kernel-exploits repository → SYSTEM shell"
 ---
 
 # AuthBy - Proving Grounds Practice

@@ -1,3 +1,9 @@
+---
+layout: post
+title: "Juicy Bar CTF - Static Code Analysis"
+summary: "Reverse engineered Android APK with JADX to find suspicious functions containing Base64-encoded secrets, extracted API key from strings.xml and PEM private key from resources, decoded Morse code patterns (4-char patterns mapped to letters), reverse engineered Whitespace programming language with Python extraction and online interpreter."
+---
+
 # Juicy Bar CTF - Static Code Analysis
 
 ![000 - Startingg](https://github.com/user-attachments/assets/80204a9e-6ac4-4e5e-847a-e298d6059d00)

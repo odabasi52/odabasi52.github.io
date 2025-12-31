@@ -1,3 +1,8 @@
+---
+layout: post
+title: "Juicy Bar CTF - Network Manipulation"
+summary: "Exported Burp Suite CA certificate and installed as system certificate, ran HTTP Toolkit's root certificate injection script for HTTPS interception, captured HTTPS responses and modified boolean values to reveal flags, intercepted server responses and altered log_flag variable triggering Logcat logging, captured WebSocket messages in Burp, used Wireshark to monitor MQTT protocol traffic, captured unencrypted DNS requests revealing flags."
+---
 # Juicy Bar CTF - Network Manipulation
 In this post, I’ll walk through the solutions to the network manipulation challenges I was able to solve. Unlike my other posts, I couldn’t complete all the challenges this time, so I’ll only be sharing the ones I managed to crack.
 

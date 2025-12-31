@@ -1,3 +1,9 @@
+---
+layout: post
+title: "Access - Proving Grounds Practice"
+summary: "File upload via Ticket.php endpoint (php blacklist) → .htaccess file upload bypass (custom .cybersec extension) → reverse shell .cybersec file upload → RCE access → BloodHound SharpHound enumeration → svc_mssql Kerberoastable user discovery → Kerberoasting via Rubeus → hash cracking (svc_mssql credentials) → RunAsCs reverse shell as svc_mssql → SeManageVolume privilege token enable script → SeManageVolumeExploit C:\ full access → Administrator shell access"
+---
+
 # Access - Proving Grounds Practice
 
 ## Enumeration

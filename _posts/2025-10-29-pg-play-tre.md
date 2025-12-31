@@ -1,3 +1,9 @@
+---
+layout: post
+title: "Tre - Proving Grounds Play"
+summary: "Directory brute-force → mantisbt config directory → a.txt database credentials exposure → adminer web application access → SQL query enumeration (users table) → SSH credentials obtained → sudo NOPASSWD shutdown privilege → linpeas writeable check-system file discovery → systemctl status check-system verification (init-based daemon) → check-system SUID modification with /bin/bash → system reboot via shutdown → SUID bash privilege escalation"
+---
+
 # Tre - Proving Grounds Play
 
 ## Enumeration

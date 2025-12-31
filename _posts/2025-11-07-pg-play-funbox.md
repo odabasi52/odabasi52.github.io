@@ -1,3 +1,9 @@
+---
+layout: post
+title: "Funbox - Proving Grounds Play"
+summary: "WordPress discovery → wpscan user enumeration → password brute-force (joe:joe) → SSH access (rbash bypass via bash shell) → mbox file enumeration → funny user backup script discovery with write privileges → pspy64 process monitoring → root user script execution identification → backup script SUID /bin/bash modification → cron job execution → SUID bash root access"
+---
+
 # Funbox - Proving Grounds Play
 
 ## Enumeration

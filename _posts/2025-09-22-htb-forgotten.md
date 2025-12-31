@@ -1,3 +1,9 @@
+---
+layout: post
+title: "Forgotten - Hack The Box"
+summary: "LimeSurvey discovery via directory brute-force → external MariaDB configuration → remote database setup via firewall rules → LimeSurvey admin account creation → CVE-2021-44967 malicious plugin upload RCE → docker container shell → socat shell upgrade → environment variable password extraction (limesvc credentials) → SSH access to host machine → custom docker mount to host exploitation → privilege escalation via mounted volume"
+---
+
 # Forgotten - Hack The Box
 
 ## Enumeration
