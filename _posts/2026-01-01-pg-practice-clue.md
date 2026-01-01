@@ -4,7 +4,7 @@ title: "Clue - Proving Grounds Practice"
 summary: "Cassandra Web Remote File Read → Obtain freeswitch password from /etc/freeswitch/autoload_configs/event_socket.conf.xml → Freeswitch command execution and Reverse shell using same port (8021) as server → su cassandra (with obtained password from /proc/self/cmdline or linpeas output) → download id_rsa → ssh as root"
 ---
 
-# Cockpit - Proving Grounds Practice
+# Clue - Proving Grounds Practice
 
 ## Enumeration
 ### Nmap 
