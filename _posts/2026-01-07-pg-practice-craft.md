@@ -27,31 +27,31 @@ At first I tried to bypass but only odt was allowed. Then I tried ODT informatio
 ### LibreOffice (ODT) Macro to RCE 
 After some reserach I found that libre office can run macros which can be used to obtain RCE. So steps to create and assign a macro is liste below.
 
-1. Tools > Macros > Edit Macros to open Macro Menu
+- Tools > Macros > Edit Macros to open Macro Menu
 
 <img width="1219" height="673" alt="08 - odt macro" src="https://github.com/user-attachments/assets/6d911c78-9db5-48d9-9803-9e5f10ee5ffb" />
 
-2. Tools > Select Macro to open Macro Creation Menu
+- Tools > Select Macro to open Macro Creation Menu
 
 <img width="941" height="387" alt="09 - select macro" src="https://github.com/user-attachments/assets/acde2275-2b5a-4914-87dd-f53a0127445d" />
 
-3. Create a new Macro
+- Create a new Macro
 
 <img width="664" height="452" alt="10 - new macro" src="https://github.com/user-attachments/assets/45721705-4120-4071-9af2-a4e1ce6a2e78" />
 
-4. Edit Macro to run shell commands
+- Edit Macro to run shell commands
 
 <img width="1152" height="434" alt="11 - shell command test" src="https://github.com/user-attachments/assets/22227e0c-a4cc-40e3-97c3-0cf9b6f80784" />
 
-5.  Tools > Customize to open Event menu and assign Macro
+-  Tools > Customize to open Event menu and assign Macro
 
 <img width="1802" height="810" alt="12 - tools customize" src="https://github.com/user-attachments/assets/678fe166-f0e7-4e2c-bd49-20fb0d8439d7" />
 
-6. Assign Macro to Open Document Event
+- Assign Macro to Open Document Event
 
 <img width="1152" height="630" alt="13 - assign macro" src="https://github.com/user-attachments/assets/5afd44f0-dd62-4602-b449-60198ec1154e" />
 
-7. Test it
+- Test it
 
 <img width="1441" height="696" alt="14 - rce" src="https://github.com/user-attachments/assets/5f111599-9140-4a2e-895d-92482012d808" />
 
