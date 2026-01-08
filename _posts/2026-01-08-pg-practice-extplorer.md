@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Extplorer - Proving Grounds Practice"
-summary: "Wordpress Installation → Local Docker MySQL Setup → Custom Wordpress Plugin Upload to RCE → Extplorer website config file filemanager/config/.htusers.php included user hash → Crack blowfish hash using hashcat → Disk Group privilege escalation → root"
+summary: "(1st way to RCE) Wordpress Installation → Local Docker MySQL Setup → Custom Wordpress Plugin Upload to RCE →  (2nd way to RCE) Extplorer Default Login admin:admin → Extplorer File Upload to RCE → Extplorer website config file filemanager/config/.htusers.php included user hash → Crack blowfish hash using hashcat → Disk Group privilege escalation → root"
 ---
 
 # Extplorer - Proving Grounds Practice
@@ -46,8 +46,8 @@ Then I simply logged in to admin dashboard.
 
 <img width="1919" height="743" alt="07 - logged in" src="https://github.com/user-attachments/assets/25d66f5f-7e9d-4218-a55a-2527f3d8c9ce" />
 
-## Exploitation
-### Custom Plugin RCE
+## Exploitation 
+### (1st way) Custom Plugin RCE
 I created a custom plugin as seen below:
 ```php
 <?php
@@ -77,6 +77,21 @@ And when I activated the plugin I got a reverse shell.
 <img width="1919" height="558" alt="11 - activate plugin" src="https://github.com/user-attachments/assets/c4fd5aae-7aea-41ae-b455-5e057d44412c" />
 
 <img width="894" height="225" alt="12 - revshell" src="https://github.com/user-attachments/assets/6e3eb039-4bcb-4f04-8a1d-f45f0c4a89af" />
+
+### (2nd Way) Extplorer File Upload to RCE
+Instead of setting up wordpress site, we could run fuzzing tools to detect filemanager endpoint which was running eXtplorer site.
+
+<img width="1920" height="679" alt="0" src="https://github.com/user-attachments/assets/8052b62b-ad7f-4a1b-b789-39d48fa9e4fb" />
+
+We could the simply upload a reverse shell to web root.
+
+<img width="1920" height="837" alt="1 upload" src="https://github.com/user-attachments/assets/b0a5bc71-dcb6-44ce-b2f2-abc8857b4ed6" />
+
+<img width="1920" height="919" alt="2 uploaded" src="https://github.com/user-attachments/assets/a77033bb-1feb-4c87-8517-e17847d72602" />
+
+Then get a reverse shell.
+
+<img width="1920" height="919" alt="3" src="https://github.com/user-attachments/assets/20aa57a1-6501-4f5f-b1cd-f73941c48c5a" />
 
 ## Lateral Movement
 ### Extplorer Configs
