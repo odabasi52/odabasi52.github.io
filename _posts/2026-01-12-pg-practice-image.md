@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Image - Proving Grounds Practice"
-summary: "ImageMagick 6.9.6-4 → CVE-2023-34152 → Remote Code Execution → Strace SUID → root"
+summary: "ImageMagick 6.9.6-4 → CVE-2023-34152 (Up to ImageMagick 7.1.1.11) → Remote Code Execution → Strace SUID → root"
 ---
 
 # Image - Proving Grounds Practice
@@ -22,7 +22,7 @@ And I uploaded a random image file, which revealed the version of ImageMagick, 6
 <img width="1919" height="442" alt="02 - version" src="https://github.com/user-attachments/assets/5213261d-287b-4eaa-b919-84a0365e75fd" />
 
 ## Exploitation
-### CVE-2023-34152
+### CVE-2023-34152 (Up to ImageMagick 7.1.1.11)
 A vulnerability was found in ImageMagick. This security flaw cause a remote code execution vulnerability in OpenBlob with --enable-pipes configured.
 
 Searching this version revealed this CVE number. Further searching showed that there was an [exploit](https://github.com/SudoIndividual/CVE-2023-34152) available.
