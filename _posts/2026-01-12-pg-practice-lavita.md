@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Lavita - Proving Grounds Practice"
-summary: "Lavarel 8.4.0 → CVE-2021-3129 → joshuavanderpoll/CVE-2021-3129 exploit → www-data shell → cronjob enumeration (pspy64) → cronjob abuse with file writing → user shell → sudo -l → composer sudo privileges → user had not write access so switched to www-data → root"
+summary: "Lavarel 8.4.0 → CVE-2021-3129 → joshuavanderpoll/CVE-2021-3129 exploit to RCE→ www-data shell → cronjob enumeration (pspy64) → cronjob abuse with file writing → user shell → sudo -l → composer sudo privileges → user had not write access so switched to www-data → root"
 ---
 
 # Lavita - Proving Grounds Practice
