@@ -41,7 +41,7 @@ Then uploaded it.
 
 <img width="1919" height="936" alt="06-  uploaded plugin" src="https://github.com/user-attachments/assets/10315893-d2c9-4801-af93-2cdcf76601a4" />
 
-Then from `server > server settings > Management Tools` I accessed the malicious plugin and entered password 123.
+Then from `Server > Server Settings > Management Tools` I accessed the malicious plugin and entered password 123.
 
 <img width="1919" height="936" alt="07 - management" src="https://github.com/user-attachments/assets/dc757468-fb5a-4800-97d2-5a63000fb906" />
 
@@ -66,7 +66,7 @@ pty.spawn("bash")
 
 <img width="1916" height="695" alt="12 - test py" src="https://github.com/user-attachments/assets/0992996f-06e6-485f-a922-69dbf8cfe5f7" />
 
-And simply by execution python3 <script> I got the reverse shell.
+And simply by executing `python3 <script>`, I got the reverse shell.
 
 <img width="1261" height="642" alt="13 - reverse shell" src="https://github.com/user-attachments/assets/8bf4cc5e-fe6d-4f15-bcea-edd9a49d6c52" />
 
