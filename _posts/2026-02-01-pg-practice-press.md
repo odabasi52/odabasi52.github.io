@@ -1,14 +1,14 @@
 ---
 layout: post
 title: "Press - Proving Grounds Practice"
-summary: "FirePress 1.2.1 → admin:password default login → CVE-2022-40048 → Upload PHP shell with GIF magic bytes → fp-content/attachs endpoint → www-data shell → sudo NOPASSWD apt-get → root"
+summary: "FlatPress 1.2.1 → admin:password default login → CVE-2022-40048 → Upload PHP shell with GIF magic bytes → fp-content/attachs endpoint → www-data shell → sudo NOPASSWD apt-get → root"
 ---
 
 # Press - Proving Grounds Practice
 
 ## Enumeration
 ### Nmap 
-Initial nmap scan revealed SSH, HTTP and port 8089 were open. Moreover, it also showed that `FirePress 1.2.1` application was running on port 8089.
+Initial nmap scan revealed SSH, HTTP and port 8089 were open. Moreover, it also showed that `FlatPress 1.2.1` application was running on port 8089.
 
 <img width="961" height="447" alt="00 - nmap" src="https://github.com/user-attachments/assets/ece47507-e07c-4144-82b5-e7a22e64940d" />
 
@@ -17,7 +17,7 @@ I visited the FirePress page and found a login page.
 
 <img width="1920" height="907" alt="01 - flatpress" src="https://github.com/user-attachments/assets/c40f364e-9b10-4c6b-81a7-c035449f13a6" />
 
-After some reaserach I found out that the default credentials for FirePress 1.2.1 was `admin:password`, so I tried it and it worked.
+After some reaserach I found out that the default credentials for FlatPress 1.2.1 was `admin:password`, so I tried it and it worked.
 
 <img width="1920" height="980" alt="02 - admin:password default" src="https://github.com/user-attachments/assets/232996b6-10cf-4fa1-bc05-279b99c240a9" />
 
