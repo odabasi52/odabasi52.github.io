@@ -7,7 +7,7 @@ summary: "TeamCity 2023.05.4 → CVE-2024-27198 → debug mode error fix → Rem
 # Scrutiny - Proving Grounds Practice
 
 ## Enumeration
-### Nmap 
+### Nmap
 Initial nmap scan revealed SSH, HTTP and SMTP were open.
 
 <img width="1463" height="558" alt="image" src="https://github.com/user-attachments/assets/a27e17e6-b650-456a-b0ae-f3d73beed45c" />
