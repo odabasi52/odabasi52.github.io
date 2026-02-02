@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Scrutiny - Proving Grounds Practice"
-summary: "TeamCity 2023.05.4 → CVE-2024-27198 → debug mode error fix → Remote Code Execution → TeamCity user commits → Found id_rsa → ssh2john to crack id_rsa → /var/mail to read mail and find cleartext password → .~ hidden file to find password → sudo NOPASSWD privileges over systemctl → !sh method → root"
+summary: "TeamCity 2023.05.4 → CVE-2024-27198 → debug mode error fix → Remote Code Execution → TeamCity user commits → Found id_rsa → ssh2john to crack id_rsa → /var/mail to read mail and find cleartext password → hidden file to find password → sudo NOPASSWD privileges over systemctl → root"
 ---
 
 # Scrutiny - Proving Grounds Practice
