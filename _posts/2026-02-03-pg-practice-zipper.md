@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Zipper - Proving Grounds Practice"
-summary: "PHAR or ZIP wrapper (phar://path/zipname.zip/file) → Remote Code Execution → www-data shell → 7za wildcard zip exploit → Linked zip file (ln -s /root/secret enox.zip) → File content reveal on error message → root"
+summary: "PHAR or ZIP wrapper (phar://path/zipname.zip/file) → Remote Code Execution → www-data shell → 7za wildcard zip (7zip wildcard) exploit → Linked zip file (ln -s /root/secret enox.zip) → File content reveal on error message → root"
 ---
 
 # Zipper - Proving Grounds Practice
@@ -53,11 +53,11 @@ There was a cron job running on behalf of the root.
 
 <img width="846" height="280" alt="08 - crontab" src="https://github.com/user-attachments/assets/43ddbf26-67c7-4f89-a87c-30e4b3e6f66e" />
 
-I checked the file and found out it was using 7za with root's password to zip files with wildcard zip.
+I checked the file and found out it was using `7za` with root's password to zip files with wildcard zip.
 
 <img width="643" height="121" alt="09 - opt backup" src="https://github.com/user-attachments/assets/020ee27b-a298-4cdd-909b-72dd2ec8f8cb" />
 
-So I did some research and found that 7za wildcard can be exploited using links to reveal file contents with error disclosure. 
+So I did some research and found that `7za wildcard` can be exploited using links to reveal file contents with error disclosure. 
 To do that:
 1. We need to create a zip file and link it to a file where we do not have read access, for example: `ln -s /root/.ssh/id_rsa root.zip`
 2. Then when 7za is called with `*zip`, it will give error on `root.zip` and reveal the contents of `/root/.ssh/id_rsa` on its output
@@ -66,7 +66,7 @@ However, there was already a linked file named `enox.zip` on the target machine.
 
 <img width="666" height="295" alt="10 - enox zip" src="https://github.com/user-attachments/assets/9ec1a3e8-3ef7-44b2-a0e9-3b7962e78f5b" />
 
-As root backup cron job saves output of the command to a backup.log file, we could simply read it to reveal `/root/secret` file's content.
+As root backup cron job saves output of the command to a `backup.log` file, we could simply read it to reveal `/root/secret` file's content.
 
 <img width="1250" height="450" alt="11 - wildcard" src="https://github.com/user-attachments/assets/8b1c57c5-741c-4b18-b505-3516968c26c9" />
 
