@@ -48,7 +48,7 @@ And I simply obtained local flag.
 <img width="752" height="459" alt="07 - local" src="https://github.com/user-attachments/assets/b444c32d-df65-455b-9cf2-61dca3a944de" />
 
 ## Privilege Escalation
-### 7za wildcard exploitation
+### 7za wildcard (7zip wildcard) exploitation
 There was a cron job running on behalf of the root.
 
 <img width="846" height="280" alt="08 - crontab" src="https://github.com/user-attachments/assets/43ddbf26-67c7-4f89-a87c-30e4b3e6f66e" />
