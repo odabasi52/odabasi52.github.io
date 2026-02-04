@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Return - Hack The Box"
-summary: "Found printer settings page allowing IP address updates for LDAP communication, performed LDAP Pass-Back Attack by changing server IP to attacker machine, captured LDAP authentication attempts via Wireshark to extract credentials, gained SSH access, discovered user in Server Operators group, modified VMware Tools service binpath to execute nc.exe reverse shell, restarted service to achieve SYSTEM-level access."
+summary: "Update server IP for Printer → LDAP Pass Back Attack (ldap pass-back) → Capture credentials using WireShark → Server Operators Group → Update service path → SYSTEM shell"
 ---
 
 # Return - Hack The Box
