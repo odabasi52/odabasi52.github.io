@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Monteverde - Hack The Box"
-summary: "Enumerated AD users via anonymous LDAP, created custom password list with username variations, brute-forced credentials via Kerbrute, found azure.xml with mhope credentials in SMB share, identified mhope in Azure Admins group, exploited Azure AD Connect to dump ADSync database, decrypted administrator password via mcrypt.dll, escalated to Domain Admin."
+summary: "LDAP Anonymous → user list → wordlist using user list (nsr) → kerbrute brute force → user password → SMB Shares → azure.xml file including user password → user shell → Azure Admins Group → Azure AD Connect privilege escalation → Decrypt Administrator Password → Administrator"
 ---
 
 # Monteverde - Hack The Box
