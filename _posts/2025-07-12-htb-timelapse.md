@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Timelapse - Hack The Box"
-summary: "Discovered encrypted ZIP file in null SMB session, cracked ZIP password via zip2john and John the Ripper, extracted .pfx certificate, cracked PFX password with pfx2john, extracted certificate and private key, used Evil-WinRM over HTTPS with certificate and private key for shell access, bypassed UAC to run WinPEAS, found PowerShell history with service account credentials, used service account with BloodHound to find LAPS read permission, retrieved LAPS password via Get-ADComputer, escalated to local admin."
+summary: "SMB Null → encrypted zip file → zip2john and crack it → Certificate and private key → evil-winrm -S (TLS) -k (private key) -c (certificate) → user shell → UAC Bypass → WinPEAS → powershell history file → service account → LAPS Reader → Read LAPS Password → Administrator"
 ---
 
 # Timelapse - Hack The Box
