@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Jeeves - Hack The Box"
-summary: "Discovered Jenkins instance via directory brute force, wrote Groovy reverse shell in Jenkins script console for RCE, found SeImpersonatePrivilege but JuicyPotato didn't work, set up SMB file share server, transferred and executed WinPEAS finding CEH.kdbx KeePass file, cracked KDBX master password via keepass2john and John the Ripper, extracted passwords from KDBX, used NTLM hash from 'Backup Stuff' entry with psexec.py pass-the-hash for Administrator access, discovered root flag in alternate data streams (ADS) of hm.txt file."
+summary: "Directory Brute Fprce → Jenkins Application → Groovy Reverse Shell → CEH.kdbx → keepass2john → keepass2 → Administrator Hashh → Administrator"
 ---
 
 # Jeeves - Hack The Box
