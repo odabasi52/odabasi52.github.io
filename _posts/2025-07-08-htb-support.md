@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Support - Hack The Box"
-summary: "Downloaded UserInfo.exe from null SMB session, reverse engineered with ILSpy to find hardcoded credentials and decryption algorithm, recovered plaintext password, enumerated AD with BloodHound finding GenericAll over DC, escalated via administrator delegation attack using PowerMad/Rubeus to obtain Kerberos TGT, authenticated with psexec.py over Kerberos for admin access."
+summary: "SMB Null → Windows Executable → ILSpy reverse engineering → Encrypted username password → Decryption Algorithm → user password → Bloodhound → GenericAll over DC → (1st way) Administrator Delegation Attack via PowerMad → (2nd way) Reset Domain Controller password and dump credentials → Administrator"
 ---
 
 # Support - Hack The Box
