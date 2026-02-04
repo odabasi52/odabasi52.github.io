@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Cascade - Hack The Box"
-summary: "Enumerated anonymous LDAP extracting users, validated with Kerbrute, grepped LDAP output for 'passw' and 'pwd' to find legacyPwd attribute with r.thompson credentials, accessed SMB share with thompson user, found HTML revealing deleted TempAdmin had Administrator password, discovered VNC log file with encrypted HEX password, decrypted via VNCDecrypt to get s.smith credentials, gained Evil-WinRM shell, analyzed logon script pointing to Audit$ share, found SQLite database with encrypted ArkSvc password, reverse engineered .NET executable and DLL to find decryption algorithm, decrypted password via CyberChef, used ArkSvc in AD Recycle Bin group to query deleted TempAdmin object and recover administrator password."
+summary: "Anonymous LDAP → Ldapsearch (Ldap Search) → User password on legacyPwd → SMB Shares → HTML file → TempAdmin Password → VNC log file → VNC Password HEX decrypt (VNC Decrypt) → user shell → Audit Share → SQLite database → ArkSvc encrypted password → ILSpy rever engineering DLL file → Decryption algorithm for SQLite password → cleartext password → AD Recycle Bin group → read deleted user password → Administrator"
 ---
 
 # Cascade - Hack The Box
