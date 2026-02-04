@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Blogger - OffSec Proving Grounds"
-summary: "Found WordPress blog under /assets/fonts/ directory, added blogger.pg to /etc/hosts to bypass domain restriction, identified vulnerable wpDiscuz plugin, exploited wpDiscuz file upload in blog comments bypassing GIF magic number check, uploaded PHP web shell, executed Python reverse shell for stable connection, found default vagrant:vagrant credentials with NOPASSWD sudo privileges, escalated to root via sudo bash -p."
+summary: "webpage under /assets/fonts folder → WordPress → wpDiscuz 7.0.4 plugin → Upload malicious PHP with GIF magic bytes → reverse shell → /etc/passwd locate user → username same as password → sudo -l → NOPASSWD ALL → root"
 ---
 
 # Blogger - OffSec Proving Grounds
