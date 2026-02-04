@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Phantom - Hack The Box"
-summary: "Found base64-encoded PDF in SMB Public share revealing default password, performed RID brute-forcing via SMB IPC$ null access to enumerate users, password-sprayed to find valid credentials, accessed Department share, found encrypted .hc Veracrypt backup file, cracked password with hashcat using company name and mutation rules, decrypted backup revealing LDAP credentials, escalated through lateral movement chain (olivia -> mark -> fiona), gained shell as fiona, discovered fiona had Kerberoasting-capable SPN, cracked Kerberos ticket for mark_admin account, escalated to mark_admin (Admin group member), dumped ntds.dit via secretsdump.py for administrator hash, escalated to admin."
+summary: "SMB Null → Mail → Base64 encoded pdf → Default password → RID Brute forcing → Password Spraying → SMB Enumeration → Crack .hc file → HashCat rule file to crack → mount VeraCrypt → Password in configuration file → user shell → ForceChangePassword (change password) → AddAllowedToAct over DC → No permission to add computer → Resource Based Contrained Delegation (RBCD on SPN-less users) → Administrator"
 ---
 
 # Phantom - Hack The Box
@@ -43,7 +43,7 @@ Then using the new set of credential, I enumerated SMB Shares again which reveal
 
 <img width="1493" height="522" alt="006 - department shares" src="https://github.com/user-attachments/assets/7caae44d-0914-4a81-b8d0-b1fbd0568069" />
 
-### Encrypted .hs File
+### Encrypted .hc File
 Inside the department share there was a .hc file which was a backup file. It could be opened using Veracrypt but we needed a password. So we can use hashcat to brute force and crack the password. 
 
 The lab mentions 'Should you need to crack a hash, use a short custom wordlist based on company name & simple mutation rules commonly seen in real life passwords (e.g. year & a special character).'. So I ran below command to brute force:
