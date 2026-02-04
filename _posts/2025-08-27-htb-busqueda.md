@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Busqueda - Hack The Box"
-summary: "Identified Searchor version vulnerable to RCE and exploited CVE-2024-3620 for initial shell access, discovered .git directory in web root, extracted plaintext credentials from .git config file, escalated to svc user via SSH with discovered credentials, gained sudo privilege to run Python3 script with specific options, exploited script to retrieve Gitea administrator credentials, accessed Gitea with admin credentials, modified Gitea-hosted script to include reverse shell, executed modified script via sudo using PATH manipulation to gain root shell."
+summary: "add domain to /etc/hosts → Searchor 2.4.0 → CVE-2023-43364 → Remote Code Execution (RCE) → User shell → sudo -l → Python script → Gitea username and password → Gitea Administrator → Access repositories and read code → using relative path → create malicious sh file → root"
 ---
 
 # Busqueda - Hack The Box
