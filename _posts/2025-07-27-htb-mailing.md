@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Mailing - Hack The Box"
-summary: "Discovered file disclosure vulnerability in download.php file parameter, exploited LFI to access hMailServer configuration file revealing MD5 hash of administrator account, cracked hash via CrackStation, authenticated to SMTP with administrator credentials, researched Windows mail server exploits discovering CVE-2024-21413 Microsoft Outlook RCE (improper file protocol validation), enumerated target email addresses from website, crafted malicious email with UNC path payload to capture NTLMv2 hash via Responder, sent emails to enumerated users until maya opened and revealed her hash, cracked maya's NTLMv2 hash with Hashcat, established Evil-WinRM shell as maya user (had PSRemote access), discovered vulnerable LibreOffice version in folder with write permissions, created malicious ODT file executing nc64.exe, waited for administrator to open file via LibreOffice auto-execution, captured admin shell."
+summary: "hMailServer → Local File Inclusion (LFI) → hMailServer config file → MD5 Hash of administrator → Crackstation → SMTP login → CVE-2024-21413 → Microsoft Outlook Capture NTLMv2 Hash → Crack the hash → user shell → LibreOffice 7.4.0.1 → CVE-2023-2255 → Administrator"
 ---
 
 # Mailing - Hack The Box
