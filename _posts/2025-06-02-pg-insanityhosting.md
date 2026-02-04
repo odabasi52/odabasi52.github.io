@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "InsanityHosting - OffSec Proving Grounds"
-summary: "Found username 'otis' on news page, brute-forced monitoring page credentials, exploited SQL injection to extract database users and hashes, cracked weak hash for SSH access, discovered .mozilla directory with Firefox encrypted credentials, decrypted offline to recover root password."
+summary: "News page disclosed a username otis → Monitoring page Brute Force using otis → Valid Login → 2nd Order SQL Injection → Get informations of database from webmail → Crack hashes → user shell → .mozilla folder → firefox decrypt → root"
 ---
 
 # InsanityHosting - OffSec Proving Grounds
