@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Active - Hack The Box"
-summary: "Discovered readable SMB share via null session, found Groups.xml file with encrypted Group Policy Preferences (GPP) credentials, decrypted GPP password using well-known key, accessed Users share to find user flag, enumerated Service Principal Names (SPNs) with GetUserSPN, requested TGS ticket for administrator (Kerberoasting), cracked TGS ticket with Hashcat module 13100."
+summary: "SMB Null → Group Policy Preferences (GPP) → GPP Password decryption → user shell → Kerberoasting against Administrator user → Administrator"
 ---
 
 # Active - Hack The Box
