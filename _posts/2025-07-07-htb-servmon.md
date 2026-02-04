@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "ServMon - Hack The Box"
-summary: "Found FTP anonymous access with passwords.txt location hint, exploited NVMS LFI to read passwords.txt file, brute-forced credentials, found NSClient++ 0.5.2.35 with admin password in nsclient.ini, bypassed localhost restriction via port forwarding, exploited CVE-2046-4802 for SYSTEM shell."
+summary: "FTP Anonymous → passwords.txt file location → NVMS Local File Inclusion (LFI) → read password.txt → NSClient++ 0.5.2.35 Privilege Escalation → SYSTEM Shell"
 ---
 
 # ServMon - Hack The Box
