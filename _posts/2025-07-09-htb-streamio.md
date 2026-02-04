@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "StreamIO - Hack The Box"
-summary: "Found admin panels via directory brute force, exploited SQL injection in search.php to dump credentials and hashes, cracked hashes to recover plaintext passwords, accessed admin panel, performed parameter fuzzing to find LFI vulnerability, injected Base64 PHP payloads for RCE through master.php eval, dumped MSSQL backup database with hardcoded admin password, gained user WinRM shell, exploited WriteOwner privilege to add user to Core Staff group for LAPS password read."
+summary: "Directory Brute Force → SQL Injection → Valid user credentials → Crack hashes → Admin panel → GET Parameter fuzzing → PHP file inclusion via PHP wrapper → read master.php file → file_get_contents and eval → remote code execution (rce) → Firefox Decrypt → bloodhound → WriteOwner over a group → Add member → read LAPS Password → Administrator"
 ---
 
 # StreamIO - Hack The Box
