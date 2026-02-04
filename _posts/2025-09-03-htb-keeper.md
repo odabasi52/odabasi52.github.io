@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Keeper - Hack The Box"
-summary: "Discovered Request Tracker website with default root credentials, logged in and found non-root user in admin panel, extracted user credentials from user settings page, gained SSH access with discovered credentials, found KeePass dump and KDBX file in user home directory, exploited CVE-2023-32784 KeePass memory dump vulnerability with keepass-dump-extractor to create wordlist, cracked KDBX master password with wordlist, used kpcli to parse KDBX (due to non-unicode characters), extracted PuTTy SSH key from database, converted PuTTy key to OpenSSH format with puttygen, gained root shell via SSH."
+summary: "add domain to /etc/hosts → Request Tracker web app → User credentials → SSH to user shell → CVE-2023-32784 → Obtain cleartext master password from keepass dump → keepass2john → keepass-dump-extractor → kpcli → root id_rsa → root"
 ---
 
 # Keeper - Hack The Box
