@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Certified - Hack The Box"
-summary: "Used initial credentials to perform RID brute-forcing and create user list, used BloodHound analysis to identify exploitation path, exploited WriteOwner privilege (judith had WriteOwner over Management group), added judith to Management group, discovered Management group had GenericWrite over management_svc user, applied Shadow Credentials attack via PowerShell to obtain valid credentials for management_svc, escalated to management_svc user via Evil-WinRM, enumerated ADCS certificate templates with Certipy finding ESC9 vulnerability, exploited management_svc GenericAll permission over CA_OPERATOR user to modify UPN to Administrator, requested admin certificate via vulnerable template, extracted Administrator NTLM hash from certificate, escalated to admin via psexec.py."
+summary: "Bloodhound-python (Bloodhound Python) → WriteOwner pver a Group → GenericWrite over a service account → Shadow Credentials attack → shell → GenericAll over CA_OPERATOR → certipy → ADCS ESC9 → Administrator"
 ---
 
 # Certified - Hack The Box
