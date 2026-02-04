@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Stapler - OffSec Proving Grounds"
-summary: "Found WordPress blog in robots.txt, enumerated users with WPScan, brute-forced admin credentials with rockyou.txt, uploaded PHP reverse shell as plugin, gained shell access, found peter SSH credentials in .bash_history with sudo NOPASSWD privileges, escalated to root."
+summary: "FTP Anonymous → usernames → Port 12380 → robots.txt to find blogblog endpoint → Wordpress brute force → Valid credentials → WordPress upload custom plugin to get a reverse shell → user shell → (1st way) .bash_history includes password → sudo permission for all commands → (2nd way) linux exploit suggester → Kernel Exploit → Dirty COW (CVE-2016-5195) → root"
 ---
 
 # Stapler - OffSec Proving Grounds
