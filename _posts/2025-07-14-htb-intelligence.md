@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Intelligence - Hack The Box"
-summary: "Brute-forced PDF documents with YYYY-MM-DD-upload.pdf naming scheme, extracted Creator metadata from PDFs using exiftool to build username list, validated usernames with Kerbrute, found default password in PDFs, password-sprayed to find valid credentials, accessed SMB shares and obtained user flag, performed ADIDNS poisoning via dnstool to add web.* DNS record (users allowed to add non-existent records), set up responder to capture NTLMv2 hash, cracked hash, used BloodHound to find GMSA read permission via ITSupport group, dumped GMSA password with GMSADumper, exploited delegation permissions to request Administrator Kerberos ticket via impacket GetST, used psexec.py with Kerberos ticket for admin shell."
+summary: "Accessible PDF files on website → exiftool to create userlist → Read PDFs to find default password → Password Spraying → SMB Shares → ADIDNS Poisoning → Crack NTLMv2 Hash → user shel → Read GMSA Password (readgmsapassword) → GMSADumper → AllowedToDelegate over DC → impacket-getST → Administrator TGT → impacket-psexec → Administrator"
 ---
 
 # Intelligence - Hack The Box
@@ -50,7 +50,7 @@ Using the valid credentials, I enumerated smb shares. Users and IT shares were n
 ### ADIDNS Poisoning
 Before continuing you can check out [this](https://docs.sysreptor.com/d/ad/insecure-adidns/) post or [this](https://www.thehacker.recipes/ad/movement/mitm-and-coerced-authentications/adidns-spoofing) post to understand ADIDNS Poisoning.
 
-IT Share contained a powershell script which sends authentication request to domains that starts with web in active directory. 
+IT Share contained a powershell script which sends authentication request to domains that starts with HTTP in active directory. 
 
 <img width="1565" height="230" alt="09 - script" src="https://github.com/user-attachments/assets/0fa92358-971b-4e6b-b0d3-4babcbf93c55" />
 
