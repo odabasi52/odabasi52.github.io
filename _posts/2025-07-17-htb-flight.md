@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Flight - Hack The Box"
-summary: "Vhost enumeration → Local File Inclusion (LFI) → LFI to SMB request → responder to obtain NTLMv2 hash → crack hash → crackmapexec or impacket-lookupsid to create userlist → password spray with same password → new user → Write access to smb share → NTLM Theft → NTLMv2 Hash → crack → Write access to web share → PHP Reverse shell → service account shell → RunAsCs to user shell → icacls → write access over web folder (inetpub) → internal port forwarding using chisel → ASPX reverse shell → Local system account → (1st way) SeImpersonatePrivilege → (2nd) Rubeus ask tgt and DCSync → Administrator"
+summary: "Vhost enumeration → Local File Inclusion (LFI) → LFI to SMB request → responder to obtain NTLMv2 hash → crack hash → crackmapexec or impacket-lookupsid to create userlist → password spray with same password → new user → Write access to smb share → NTLM Theft → NTLMv2 Hash → crack → Write access to web share → PHP Reverse shell → service account shell → RunAsCs to user shell → icacls → write access over web folder (inetpub) → internal port forwarding using chisel → ASPX reverse shell → Local system account → (1st way) SeImpersonatePrivilege → (2nd) Rubeus ask tgt → ntpdate to fix time issue and DCSync → Administrator"
 ---
 
 # Flight - Hack The Box
