@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Monitoring - OffSec Proving Grounds"
-summary: "Brute-forced Nagios XI nagiosadmin with common passwords, exploited CVE-2019-15949 authenticated RCE in Nagios XI, gained root shell directly."
+summary: "Nagios XI → nagiosadmin → brute force password → Nagios XI 5.6.6 → CVE-2019-15949 → exploit → root"
 ---
 
 # Monitoring - OffSec Proving Grounds
