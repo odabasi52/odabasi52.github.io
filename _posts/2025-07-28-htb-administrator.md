@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Administrator - Hack The Box"
-summary: "Started with initial user (olivia) with GenericAll over michael, force-changed michael's password, discovered michael had ForceChangePassword over benjamin, changed benjamin's password, confirmed benjamin had FTP read access, downloaded encrypted backup file from FTP, cracked PwSafe encrypted backup using pwsafe2john with Hashcat, extracted emily user credentials from decrypted PwSafe, escalated to emily, used BloodHound discovering emily had GenericWrite over ethan, applied targeted Kerberoasting (assigned SPN to ethan, requested TGS ticket), cracked Kerberos ticket with Hashcat, verified ethan had DCSync permissions, performed DCSync with secretsdump.py using ethan credentials, extracted Administrator NTLM hash, escalated to admin."
+summary: "Generic All over a user → ForceChange user password → ForceChangePassword over a user → FTP Login → PwSafe file → pwsafe2john and crack → user password → user shell → GenericWrite over a user → Targeted Kerberoasting → DCSync → Administrator"
 ---
 
 # Administrator - Hack The Box
@@ -51,7 +51,7 @@ And using pwsafe I got the emily's password.
 
 ## Privilege Escalation
 ### Targeted Kerberoasting
-Checkin bloodhound again, I found emily had generic write permissions over ethan. So we can apply targeted kerberoasting attack.
+Checking bloodhound again, I found emily had generic write permissions over ethan. So we can apply targeted kerberoasting attack.
 
 <img width="522" height="311" alt="12 - path" src="https://github.com/user-attachments/assets/a5319b41-33f1-4f58-910c-4acf9f5e2982" />
 
