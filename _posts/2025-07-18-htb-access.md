@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Access - Hack The Box"
-summary: "Found FTP anonymous login with .mdb legacy Microsoft Access database and encrypted ZIP file, extracted plaintext password from database using strings command, decrypted ZIP file with 7z revealing .pst Outlook file, parsed PST file extracting username and password, connected via Telnet with extracted credentials for user flag, enumerated stored credentials using cmdkey /list, transferred nc64.exe via SMB share, executed nc64 as Administrator using runas command with stored credentials for admin shell."
+summary: "FTP Anonymous → MDB (.mdb) file → strings to read password → encrypted zip → decrypt zip usin 7z → PST (.pst) file → Online PST (Outlook Messages) interpreter or readpst → user password → user shell → stored credentials (cmdkey /list) → runas with nc64.exe → Administrator"
 ---
 
 # Access - Hack The Box
