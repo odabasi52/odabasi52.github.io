@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Election - OffSec Proving Grounds"
-summary: "Discovered credentials in public logs page, accessed phpMyAdmin with default root:toor, SSH'd with discovered credentials, found Serv-U SUID binary, exploited CVE-2019-12181 for root shell."
+summary: "robots.txt includes usernames → Logs page on website → Credentials found → phpMyAdmin login → crack hash → SSH user shell → (1st way) SUID Serv-U binary (CVE-2019-12181) → (2nd way) PwnKit Privilege Escalation (CVE-2021-4034) → (3rd way) Baron Samedit Exploit (CVE-2021-3156) → root"
 ---
 
 # Election - OffSec Proving Grounds
