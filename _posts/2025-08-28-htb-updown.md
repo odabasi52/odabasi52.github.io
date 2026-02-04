@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "UpDown - Hack The Box"
-summary: "Dumped publicly accessible .git repository using git-dumper tool, extracted source code revealing Special-Dev header requirement and file upload filter logic, bypassed file upload filter using .phar extension (phar protocol combined with zip compression), exploited phar include to upload and execute PHP reverse shell bypassing extension filters, gained www-data shell, discovered Python2 script with eval() vulnerability running as developer user, executed /bin/bash via eval to gain developer shell, copied SSH private key to establish SSH session, discovered sudo easy_install privilege, exploited GTFOBins easy_install technique to gain root shell."
+summary: "add domain to /etc/hosts → directory brute force → .git folder → Git Dumper → PHP and .htaccess files → .htaccess to find Special-Dev header → Subdomain enumeration → Burp match-replace to add header → PHAR wrapper (phar://path/zipname/file) → Disallowed PHP functions → proc_open PHP reverse shell → www-data shell → python2 exploit to obtain user → user id_rsa → SSH user shell → sudo -l → sudo easy_install → root"
 ---
 
 # UpDown - Hack The Box
