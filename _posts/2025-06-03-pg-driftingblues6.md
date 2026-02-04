@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "DriftingBlues6 - OffSec Proving Grounds"
-summary: "Found robots.txt hint to append .zip extension, discovered password-protected scammer.zip, cracked with zip2john and John the Ripper, obtained Textpattern CMS credentials, uploaded PHP reverse shell, exploited Dirty COW (CVE-2016-5195) for root."
+summary: "Directory Brute Force with zip extension → found zip and credentials → Textpattern CMS 4.8.3 → Remote Code Execution (RCE) → user shell → Kernel Exploit → Dirty Cow (CVE-2016-5195) → root"
 ---
 
 # DriftingBlues6 - OffSec Proving Grounds
