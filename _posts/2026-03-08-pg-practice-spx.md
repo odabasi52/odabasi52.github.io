@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "SPX - Proving Grounds Practice"
-summary: "phpinfo.php SPX entry → SPX 0.4.15 → CVE-2024-42007 path traversal → read index.php of tinyfilemanager (Tiny FileManager) to find hashes passwords → crack password with hashcat using rockyou.txt → reverse shell via tinyfilemanager upload → cracked password was user password → sudo make install → update Makefile to execute shell command → root"
+summary: "phpinfo.php SPX entry → SPX 0.4.15 → CVE-2024-42007 path traversal (SPX_KEY and SPX_UI_URI) → read index.php of tinyfilemanager (Tiny FileManager) to find hashes passwords → crack password with hashcat using rockyou.txt → reverse shell via tinyfilemanager upload → cracked password was user password → sudo make install → update Makefile to execute shell command → root"
 ---
 
 # SPX - Proving Grounds Practice
@@ -27,7 +27,7 @@ Then visiting the endpoint revealed `SPX 0.4.15` was in use.
 
 ## Exploit
 ### CVE-2024-42007
-SPX (aka php-spx) through 0.4.15 allows SPX_UI_URI Directory Traversal to read arbitrary files.
+SPX (aka php-spx) through 0.4.15 allows `SPX_UI_URI` Directory Traversal to read arbitrary files.
 
 At first I searched for exploits and found one on github. But it was using hardcoded `SPX_KEY` value as seen in the image.
 
