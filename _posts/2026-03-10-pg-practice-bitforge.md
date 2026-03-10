@@ -13,7 +13,7 @@ Initial nmap scan revealed SSH and HTTP ports were open. Moreover, it showed `.g
 <img width="1548" height="710" alt="00 - nmap" src="https://github.com/user-attachments/assets/8be6f728-846c-45e8-b0d0-c898ece5f3ab" />
 
 ### Web Enumeration
-Website directed us to `bitforge.lab` so I added it to `/etc/hosts` file.
+Website directed us to `bitforge.lab` so I added it to `/etc/hosts` file. 
 
 <img width="1160" height="476" alt="01 - web" src="https://github.com/user-attachments/assets/1cbfccc3-be22-48a2-b142-bc13bafaacf9" />
 
