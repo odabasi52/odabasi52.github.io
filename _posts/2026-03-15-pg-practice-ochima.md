@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Ochima - Proving Grounds Practice"
-summary: "Mailtrail 0.52 → CVE-2025-34073 → Command Injection on username parameter → RCE using curl → pspy64 → writeable backup script → overwrite backups script with chmod +s /bin/bash → root"
+summary: "Maltrail 0.52 → CVE-2025-34073 → Command Injection on username parameter → RCE using curl → pspy64 → writeable backup script → overwrite backups script with chmod +s /bin/bash → root"
 ---
 
 # Ochima - Proving Grounds Practice
@@ -13,7 +13,7 @@ Initial nmap scan revealed SSH, HTTP and 8338 ports were open.
 <img width="910" height="455" alt="Image" src="https://github.com/user-attachments/assets/35d8faad-cc14-4f18-9e03-2ff20efa5a28" />
 
 ### Web Enumeration
-Website at port 8338 was `Mailtrail 0.52`
+Website at port 8338 was `Maltrail 0.52`
 
 <img width="1286" height="834" alt="Image" src="https://github.com/user-attachments/assets/6754ee95-8ffe-4edd-a18b-24468fe02881" />
 
