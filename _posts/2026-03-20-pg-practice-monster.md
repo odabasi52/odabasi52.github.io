@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Monster - Proving Grounds Practice"
-summary: "Directory Brute Force → Monstra 3.0.4 → RCE → Monstra 3.0.4 users.table.xml decryption → C:\\xamp writeable by user → CVE-2020-11107 → malicious executable using C code and i686-w64-mingw32-gcc → Administrator"
+summary: "Directory Brute Force → Monstra 3.0.4 → RCE → Monstra 3.0.4 users.table.xml decryption → C:\\xamp writeable by user → xampp 7.3.10-1 → CVE-2020-11107 → malicious executable using C code and i686-w64-mingw32-gcc → Administrator"
 ---
 
 # Monster - Proving Grounds Practice
