@@ -12,7 +12,7 @@ Initial nmap scan revealed common DC ports.
 
 <img width="1128" height="422" alt="00nmap" src="https://github.com/user-attachments/assets/58be6cab-986f-497e-a253-f65ffb9eb666" />
 
-I added necessary domains to `/etc/hosts` file.
+I added necessary domains to `/etc/hosts` file. 
 
 <img width="861" height="329" alt="01 0 etc hosts" src="https://github.com/user-attachments/assets/97c84de2-d608-4c57-b7a3-a572ca6d9770" />
 
