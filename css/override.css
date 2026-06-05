@@ -243,3 +243,26 @@ hr {
   color: var(--post-meta-color, #666);
   font-size: 1.1rem;
 }
+
+/* Responsive image sizing */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* For post content specifically */
+.post-content img,
+article img {
+  max-width: 100%;
+  height: auto;
+  margin: 1.5rem auto;
+}
+
+/* Limit image width on larger screens */
+@media (min-width: 768px) {
+  .post-content img,
+  article img {
+    max-width: 90%;
+  }
+}
