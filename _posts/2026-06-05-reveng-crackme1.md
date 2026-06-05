@@ -5,6 +5,15 @@ summary: "Reverse Engineering → Detect It Easy (die) → x64dbg and x32dbg →
 ---
 
 # CrackMe1
+A gui-based crackme written in Visual Studio 2017 win32 API. 
+
+Objectives:
+- Find the serial key and enter in the textbox
+- Patch the file to always show the Congrats message when button Check is clicked
+
+Link: [https://crackinglessons.com/crackme1/](https://crackinglessons.com/crackme1/)
+
+
 ## Software
 At first I opened the software and analyzed it. It was a simple app that shows a messagebox when wrong serial number is entered.
 
