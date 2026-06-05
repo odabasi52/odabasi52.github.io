@@ -54,7 +54,7 @@ We can simply enter it and GG.
 ## 2nd way (Patching to Bypass Serial Key)
 Another way is to bypass controls and directly see messagebox. To do this we first neet to understand how messagebox works.
 
-```
+```cs
 int MessageBox(
   [in, optional] HWND    hWnd, // parent windows (0 = belongs to no parent)
   [in, optional] LPCTSTR lpText, // text
