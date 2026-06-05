@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Reverse Engineering - CrackMe1"
-summary: "Reverse Engineering → Detect It Easy (die) → x64dbg and x32dbg → Serial Key obtaining or Serial Key bypass → win32 API → GetDlgItemTextA and MessageBox → patching"
+summary: "Reverse Engineering → Detect It Easy (die) → x64dbg and x32dbg → Serial Key obtaining or Serial Key bypass → win32 API → GetDlgItemTextA and MessageBox → JMP and XOR → patching"
 ---
 
 # CrackMe1
@@ -51,7 +51,7 @@ We can simply enter it and GG.
 
 <img width="403" height="240" alt="06 - gg" src="https://github.com/user-attachments/assets/3c818997-a8b7-4b88-ac75-7fd234668351" />
 
-## 2nd way (Patching to Bypass Serial Key)
+## 2nd way (Patching to Bypass Serial Key via JMP)
 Another way is to bypass controls and directly see messagebox. To do this we first neet to understand how messagebox works.
 
 ```c
@@ -88,4 +88,9 @@ Than simply patch and save.
 And that's it.
 
 <img width="860" height="358" alt="12 - gg" src="https://github.com/user-attachments/assets/03de9931-1681-4b02-9af4-5c41858b9980" />
+
+## 3rd way (Bypassing Serial Key via XOR)
+We could also use `XOR` operation and override `JNE` to write `0` to EAX register and show the messagebox.
+
+<img width="753" height="70" alt="image" src="https://github.com/user-attachments/assets/a65bea8e-275f-4484-b0bd-0b275765fe2e" />
 
