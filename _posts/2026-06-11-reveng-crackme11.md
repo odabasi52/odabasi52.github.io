@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Reverse Engineering - CrackMe11"
-summary: "Reverse Engineering → Detect It Easy (die) → x64dbg and x32dbg → win32 API → UPX 3.91 packer → Unpack with scylla → PUSHAD, PUSH EBP, POPAD, POP EBP → Hardware Breakpoint → Memory Dump"
+summary: "Reverse Engineering → Detect It Easy (die) → x64dbg and x32dbg → win32 API → UPX 3.91 packer → (1st way) Unpack with scylla → PUSHAD, PUSH EBP, POPAD, POP EBP → Hardware Breakpoint → Memory Dump → (2nd way) use dup2.exe to patch memory on runtime → export patch → create loader"
 ---
 
 # CrackMe11
@@ -23,7 +23,7 @@ It was a simple application where it shows `Sorry Wrong Key` when wrong serial k
 
 <img width="1814" height="480" alt="00 - die" src="https://github.com/user-attachments/assets/bc57a704-f937-4006-8832-9e3d573af907" />
 
-## x32dbg
+## First Way (Unpacking)
 The logic was simple. It was not executing `JE` if serial key was wrong.
 
 <img width="1346" height="406" alt="01 - logic" src="https://github.com/user-attachments/assets/483ffd20-46d9-4d4f-aeba-7eb2dde1e6a6" />
@@ -32,7 +32,6 @@ But we could not patch it.
 
 <img width="1099" height="517" alt="02 - cannot patch" src="https://github.com/user-attachments/assets/04a98e1c-2521-4ce9-a794-f73b079be656" />
 
-## Unpacking
 To unpack, we first need to restart the program and find where it executed `PUSHAD` or `PUSH EBP`. These commands are characteristics of UPX packers.
 
 <img width="1272" height="184" alt="03 - found pushad" src="https://github.com/user-attachments/assets/e20b7d96-c6bb-44f8-92cc-c804179931cc" />
@@ -72,7 +71,6 @@ And it is fixed.
 
 <img width="1160" height="615" alt="12 - fixed" src="https://github.com/user-attachments/assets/152d1d73-b293-46ab-abd5-344ea034be3a" />
 
-## Patching
 Now we can simply open it with x32dbg and patch it.
 
 <img width="884" height="443" alt="14 - pacthed" src="https://github.com/user-attachments/assets/abbf2824-6d71-48ea-bc71-3b9fbec6a600" />
@@ -81,5 +79,45 @@ And we won.
 
 <img width="400" height="347" alt="15 - gg" src="https://github.com/user-attachments/assets/8294f0d1-05ff-43f7-b86c-94ea00a2bc06" />
 
+## Second Way (Creating Loaders)
+At first we need to find the place to patch.
 
+<img width="1313" height="437" alt="00 - place to patch" src="https://github.com/user-attachments/assets/4efe9098-e727-4145-bf48-e9ec1c2e2527" />
 
+As we know, because packer is used we cannot patch it. However, we can export it.
+
+<img width="958" height="124" alt="01 - updated" src="https://github.com/user-attachments/assets/95906fe8-24e9-487d-b65e-2786e45f0dff" />
+
+<img width="571" height="528" alt="02 - export" src="https://github.com/user-attachments/assets/cd0af5e3-9447-40ab-90d7-e3e9cd29fdc2" />
+
+<img width="826" height="552" alt="03 - crackme11" src="https://github.com/user-attachments/assets/e63fdf9a-0145-4f7a-8810-696cd8040d21" />
+
+After exporting, we get a file that includes `Relative Virtul Address`, old and new command.
+
+<img width="639" height="186" alt="04 - file" src="https://github.com/user-attachments/assets/52048e91-152a-4e87-8cce-b34d5114306c" />
+
+Then we open `dup2.exe` and create a new project.
+
+<img width="429" height="298" alt="05 - create new project" src="https://github.com/user-attachments/assets/4a2ba671-f778-47b9-9ece-f0424f091184" />
+
+<img width="475" height="540" alt="06 - save" src="https://github.com/user-attachments/assets/e0b70bfc-1452-4609-bcf4-6b1bc859b85f" />
+
+Then right click this project and select offset patch.
+
+<img width="637" height="347" alt="07 - offsetpatch" src="https://github.com/user-attachments/assets/e17ef581-4488-4b18-9ca5-cde3537b942f" />
+
+Now we have to choose Relative Virtual Address here if we want to give the address without base address.
+- Virtual Address (VA) is `Base Address (00400000) + Offset`
+- RVA is only Offset
+
+Then we fill original byte and patched byte.
+
+<img width="937" height="390" alt="08 - patching" src="https://github.com/user-attachments/assets/e695bca7-da38-425e-9451-d1151ce5d8ad" />
+
+And finally we create a loader (simple loader).
+
+<img width="336" height="297" alt="09 - craeteloader" src="https://github.com/user-attachments/assets/efd1beaa-a026-4486-bc91-9e5b561acf88" />
+
+And that is it.
+
+<img width="828" height="505" alt="10 - gg" src="https://github.com/user-attachments/assets/1710985e-b22a-4cd6-a655-911c3a9917bc" />
